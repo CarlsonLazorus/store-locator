@@ -7,23 +7,1316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eureka Drinks - Store Locator</title>
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <h2>Find stores near you</h2>
+<script>
+    const search = () =>{
+        const searchBox = document.getElementById("search").value.toUpperCase();
+        const allLocations = document.getElementById("locations");
+        const locations = document.querySelectorAll(".outlets-name");
+        const container = document.querySelectorAll(".container");
+        const locationsDetails = allLocations.getElementsByTagName("h3");
+        
+        for(var i = 0; i < locationsDetails.length;i++)
+        {
+            let match = locations[i].getElementsByTagName('p')[0];
 
+            if(match){
+                let textvalue = match.textContent || match.innerHTML
+
+                if(textvalue.toUpperCase().indexOf(searchBox) > -1){
+                    locations[i].style.display = "";
+                    container[i].style.display = "";
+                }else{
+                    locations[i].style.display = "none";
+                    container[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function count(){
+        const total = document.querySelectorAll('#locations .outlets-name').length;
+        alert(total);
+    }
+</script>
+
+<body>
+    <h1>Find stores near you</h1>
+    <div class="search-location">
+        <i class="fas fa-search"></i>
+        <input onkeyup = "search()" type="text" id="search" placeholder="Search a location(e.g penampang, Beaufort...)"/>
+    </div>
+
+    <input type="submit" onclick="count()" value="count" /> 
     <!--Locations-->
-    <div class="locations">
+    <!--Sabah-->
+    <div class="locations" id="locations">
         <div class="container">
             <div>
                 <div class="outlets-name">
                     <h3>616 Media</h3>
+                    <p>Lot 20, Jalan Kilang, Sedco, Off, Mile 5.5, Kolombong/Bdc Industrial Estate, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/616+Media/@5.9813785,116.1176147,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfbe75b3630459c5e!8m2!3d5.9813928!4d116.1175107" target="_blank">Maps</a>
+                    </strong>    
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>AYAMESRA SDN BHD</h3>
+                    <p>Penampang - Kinarut/Papar Old Hwy, 89500 Donggongon, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Quality+Broadway+Sdn+Bhd/@5.8914443,116.0992368,17.27z/data=!4m5!3m4!1s0x323b664880e8e49f:0x479560a4ace3be80!8m2!3d5.890808!4d116.1002272" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>CCK Local City Mall KK</h3>
+                    <p>City Mall, Jln Lintas, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/CCK+Local+City+Mall+KK/@5.9617822,116.0963708,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8ce8ce2093503587!8m2!3d5.9617822!4d116.0963708" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Chau Sui Teck (Mawar) Sdn. Bhd.</h3>
+                    <p>90000 Sandakan, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Chau+Sui+Teck+(Mawar)+Sdn.+Bhd./@5.8417016,118.0342281,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x964e2772510cf7d8!8m2!3d5.8416588!4d118.0342291" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Citi Super</h3>
+                    <p>Sutera Avenue, 88100 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Citi+Super+Sutera+Avenue/@5.9675197,116.0655429,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa6ab648052cab7dc!8m2!3d5.9675197!4d116.0655429" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>CNF Hypermarket Sdn.Bhd. </h3>
+                    <p>Beaufort, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/5%C2%B020'52.8%22N+115%C2%B043'38.0%22E/@5.3480094,115.7265251,18z/data=!3m1!4b1!4m6!3m5!1s0x0:0xd93da6fef7c41b9!7e2!8m2!3d5.3480084!4d115.7272168" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Coop Mart (Patut & Jimat)</h3>
+                    <p>Lot 23, Block D, At Commercial Lot, New Beaufort Jaya, Near Beaufort Bridge, 89800, Beaufort Jaya, 89800 Beaufort, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Coop+Mart+(Patut+%26+Jimat)/@5.3455021,115.7412726,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xcc09cbd3b63d400!8m2!3d5.3455213!4d115.7413088" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Daffodil Grocer</h3>
+                    <p>Ground Floor, Lot 1-11, Block K, Lorong KK Taipan, Inanam, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Daffodil+Grocer/@5.9942161,116.1386731,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc444191d7184de9e!8m2!3d5.9942216!4d116.1386676" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Desa Greens Mini Mart</h3>
+                    <p>G-45-G, Ground Floor, Block G, Pavilion Bundusan, Jln Bundusan Penampang, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Desa+Greens+Mini+Mart/@5.9295695,116.0942897,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9829134c12605a5a!8m2!3d5.9295695!4d116.0942897" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Era Jaya Sports & Souvenir</h3>
+                    <p>1, Jalan, Lorong Centre Point, Pusat Bandar Kota Kinabalu, 88000 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Era+Jaya+Sports+%26+Souvenir/@5.978109,116.071998,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc106a734049db82c!8m2!3d5.978109!4d116.071998" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Ever Spring Mini Mart</h3>
+                    <p>88200 Kota Kinabalu, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Ever+Spring+Mini+Mart/@5.9408504,116.07091,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe1501cfa897df024!8m2!3d5.9408504!4d116.07091" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Family Fresh Mart, Semarak</h3>
+                    <p>Km 5, Jalan Kuhara, Taman Sejati, Semarak, 91000 Tawau, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Family+Fresh+Mart,+Semarak/@4.298037,117.885405,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9351095c815b34f6!8m2!3d4.298037!4d117.8854049" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>City Fresh Mart @ Hill Top, Tawau</h3>
+                    <p>Tb 0025, Taman Hill Top,91000, 91000 Tawau, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/City+Fresh+Mart+@+Hill+Top,+Tawau/@4.2739915,117.8820422,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x95e8a73f5a6844ea!8m2!3d4.274068!4d117.8820156" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Fresh2GO Grocer Sabah</h3>
+                    <p>Lot 16, Fortuna Commercial Centre, Mile, 2.5, Jalan Penampang, 88200 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Fresh2GO+Grocer+Sabah/@5.9540333,116.0775162,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbe10885b59d56cf7!8m2!3d5.9540333!4d116.0775162" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Golden Dragon City (Sabah) Sdn Bhd</h3>
+                    <p>Lot 25-32, Block E 89150, Jln Kota Belud - Kudat, 89150 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Golden+Dragon+City+(Sabah)+Sdn+Bhd/@6.3548545,116.4271684,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd55a1ea4822d39cd!8m2!3d6.3548545!4d116.4271684" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Golden Dragon City (Sabah) Sdn. Bhd.</h3>
+                    <p>Papar benoni golden dragon city golden dragon papar, 89600 kota kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Golden+Dragon+City+(Sabah)+Sdn.+Bhd./@5.703093,115.9338136,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa53331eada0efeab!8m2!3d5.703093!4d115.9338136" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Hikmat Mini Market</h3>
+                    <p>Lot 331, MDLD 7234, Jalan Silam, Sri Perdana Phase 3, 91100, Lahad Datu, Sabah, Kampung Sapagaya, 91100 Lahad Datu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Hikmat+Mini+Market/@5.0226659,118.2892737,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x5cc054360e129b6a!8m2!3d5.0226599!4d118.2893053" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>JAMAL KHAN ENTERPRISE</h3>
+                    <p>16, Jalan Maktab Gaya, Taman Luyang Phase 2, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/JAMAL+KHAN+ENTERPRISE/@5.9587823,116.0864466,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x214efbd08dfbf119!8m2!3d5.9587823!4d116.0864466" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Jintian Mini Market</h3>
+                    <p>Tingkat bawah, Lot 1 & 2, Jalan Inobong, Kedai Taman Tanaki, Penampang, 89507 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Jintian+Mini+Market/@5.9025393,116.1091691,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x65abba0e3bb2cb9c!8m2!3d5.902517!4d116.109177" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kedai Runcit Kohizan</h3>
+                    <p>Taman Masjaya, 88200 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kedai+Runcit+Kohizan/@5.9265125,116.073605,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb05a8fd9918d4624!8m2!3d5.9264848!4d116.0736002" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Chong Vui Sin</h3>
+                    <p>89900 Tenom, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Chong+Vui+Sin/@4.987661,115.923994,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe123f743eaef2b20!8m2!3d4.987661!4d115.923994" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kedai Yit Hung</h3>
+                    <p>Bandar Lahad Datu, 91100 Lahad Datu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kedai+Yit+Hung/@5.02216,118.3303089,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x66ac50ab765e11ad!8m2!3d5.02216!4d118.3303089" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>LILI MART</h3>
+                    <p>LOT 06,GROUND FLOOR BLOCK D, Pekan Donggongon, 89500 Penampang, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/LILI+MART/@5.912182,116.1026967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x18bed860e549e52e!8m2!3d5.912182!4d116.1026967" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Never Close Super Mart</h3>
+                    <p>60, First Floor, 78, Jalan Gaya, Kota Kinabalu, 88000 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Never+Close+Super+Mart/@5.984678,116.0774516,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x52e9645ff1935f15!8m2!3d5.984678!4d116.0774516" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Opple Supermarket Sdn Bhd</h3>
+                    <p>Inanam, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Opple+Supermarket+Sdn+Bhd/@5.9939414,116.133158,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x30ccd1d5366c823d!8m2!3d5.9939416!4d116.1331578" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Parkwell Department Store</h3>
+                    <p>GF, G-2 , KK Plaza , Jalan Tun Fuad Stephens , 88000 Kota Kinabalu , Sabah, Kota Kinabalu, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Parkwell+Department+Store/@5.9824177,116.0736366,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x94ae41b2b432b705!8m2!3d5.9824177!4d116.0736366" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>PASARAYA DAMAI</h3>
+                    <p>2, Jalan Damai, 91000 Tawau, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/PASARAYA+DAMAI/@4.2503177,117.8987097,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc7d0ba4ba0866ed9!8m2!3d4.2503179!4d117.8986974" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Rose enterprise</h3>
+                    <p>Bukit Garam, 90000 Kinabatangan, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="google.com/maps/place/Rose+Enterprise/@5.4945445,117.8357553,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xf938b31ffcc6c6bb!8m2!3d5.4945445!4d117.8357553" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Sabah Chilli Pan Mee (Lintas) 沙巴辣椒板面</h3>
+                    <p>LOT 1, GROUND FLOOR, BLOCK A, LINTAS SQUARE, Jln Lintas, Taman Southern, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Sabah+Chilli+Pan+Mee+(Lintas)+%E6%B2%99%E5%B7%B4%E8%BE%A3%E6%A4%92%E6%9D%BF%E9%9D%A2/@5.9472656,116.0899688,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x2ac012a8e974445!8m2!3d5.9472656!4d116.0899688" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Jaya Supermarket Kudat</h3>
+                    <p>Batu 2 1/2, Jalan Bawah, Peti Surat 438, 89058, 89050 Kudat, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Jaya+Supermarket+Kudat/@6.9108159,116.8462475,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfa29b1bad71532b2!8m2!3d6.9108159!4d116.8462475" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Hypermarket Benoni</h3>
+                    <p>Ground, First and Second Floor of Shoplot No.178, 3-storey Hypermarket, Benoni Commercial Centre Phase 3A, 89600 Papar, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Hypermarket+Benoni/@5.7003358,115.93673,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x4f4d407bf7bd939!8m2!3d5.7003358!4d115.93673" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Jaya Supermarket Sg Tajong</h3>
+                    <p>Lot 3A-8A Kompleks, Jalan Sungai Tajong, 91000 Tawau, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Jaya+Supermarket+Sg+Tajong/@4.2756513,117.9008166,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x13f98bd3fa34476e!8m2!3d4.2756513!4d117.9008166" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Jaya Kunak</h3>
+                    <p>Pekan Kunak, 91100 Kunak, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Jaya+Kunak/@4.6844301,118.2483927,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x508fa53faac1890f!8m2!3d4.6844301!4d118.2483927" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Jaya Sejati Walk</h3>
+                    <p>G-B-90 Sejati Walk, 90000, 90000 Sandakan, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Jaya+Sejati+Walk/@5.8929261,118.0529656,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xea07b65c09220f8c!8m2!3d5.8929261!4d118.0529656" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Jaya Sipitang</h3>
+                    <p>1, Jln Sipitang - Sindumin, 89850 Sipitang, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Jaya+Sipitang/@4.9800249,115.5418492,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc6ce4293cd46e055!8m2!3d4.9800249!4d115.5418492" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>STHAMIN Supermarket Kunak</h3>
+                    <p>Kampung Simpang Empat, 91000 Kunak, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/STHAMIN+Supermarket+Kunak/@4.6740635,118.2150196,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xcdb7a183f33bec30!8m2!3d4.6740635!4d118.2150196" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>The Stop n Shop</h3>
+                    <p>3a, Jln Kampung Kobusak, Kampung Kobusak, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/The+Stop+n+Shop/@5.9387939,116.0827891,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8442a86a46c86157!8m2!3d5.9387391!4d116.0827415" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Syarikat Inovatif Kontraktor</h3>
+                    <p>Lot 18, 17 2nd Floor, Jalan Penampang, Sabah, Taman Cameron, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Syarikat+Inovatif+Kontraktor/@5.9388291,116.0838301,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7112ff173945c1e9!8m2!3d5.9388291!4d116.0838301" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Tai Yang Supermarket Sdn. Bhd.</h3>
+                    <p>TB 352-354, Block B, Lot 8-10, Warehouse Locked Bag No. 23, Bandar Sabindo Commercial, Sabah, Bandar Tawau, 91009 Tawau</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Tai+Yang+Supermarket+Sdn.+Bhd./@4.2420791,117.8868692,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x376997a50f356684!8m2!3d4.2420791!4d117.8868692" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Umart Retail Sdn Bhd</h3>
+                    <p>Unnamed Road, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/UMART+UUC/@6.0891983,116.1854972,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc9b459cf59d2ca2!8m2!3d6.0891983!4d116.1854972" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Y & L Marketing</h3>
+                    <p>89100 Kota Marudu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Y+%26+L+Marketing/@6.4941847,116.7600453,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x2a1e106256eda50a!8m2!3d6.4941925!4d116.7600457" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Y & L Marketing</h3>
+                    <p>Beaufort Jaya, 89800 Beaufort, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Y+%26+L+Marketing/@5.3452397,115.7416598,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6a5cab77ff653168!8m2!3d5.3452397!4d115.7416598" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Yung Siang Enterprise Sdn Bhd</h3>
+                    <p>89709, Jln Bandau Kuala Penyu, 89709 Membakut, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Yung+Siang+Enterprise+Sdn+Bhd/@5.479277,115.7976865,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xdbe95192b4d9a5b8!8m2!3d5.479277!4d115.7976865" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Santiqi Kitchen</h3>
+                    <p>Lot 36, University Plaza, Jalan Sulaman, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Santiqi+Kitchen/@6.0429224,116.1476669,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbd351783fb68f8de!8m2!3d6.0429224!4d116.1476669" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Stesen Minyak Shell Jalan Sulaman</h3>
+                    <p>Wisma Innoprise, Jalan UMS Adjacent To, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Shell/@6.0181481,116.1149566,15z/data=!4m5!3m4!1s0x0:0xc3f9fbf06d0d438f!8m2!3d6.0181481!4d116.1149566" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Usaha Unimart</h3>
+                    <p>Cafe, Jalan Kolej Kediaman E, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kolej+Kediaman+E+(Kampung+E)+Universiti+Malaysia+Sabah/@6.0466968,116.1253585,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7f7b4dd14b751807!8m2!3d6.0466968!4d116.1253585" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Star Corner</h3>
+                    <p>Jalan Pekan Tenghilan, 89150 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Star+Corner/@6.2575229,116.3365904,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd5cc4bfe60cec41d!8m2!3d6.257518!4d116.336585" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Mee Tauhu Ori</h3>
+                    <p>15, Lorong Perindustrian, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Mee+Tauhu+Ori/@5.9910274,116.1283803,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8a19818bbe3d57b4!8m2!3d5.9910274!4d116.1283804" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Gilling Futsal Center</h3>
+                    <p>Kampung Giling, 89200 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Gilling+Futsal+Center/@6.1152324,116.2054008,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb321f5d9c1a24be6!8m2!3d6.1152324!4d116.2054008" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Shell</h3>
+                    <p>Jalan Tuaran, Batu 4 1/2, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Shell/@5.9932564,116.1135233,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfe2c35fb07f056ee!8m2!3d5.9932564!4d116.1135233" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Fresh Mart Korporasi Pembangunan Desa (KPD)</h3>
+                    <p>Lorong Signal Hill, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Fresh+Mart+Korporasi+Pembangunan+Desa+(KPD)/@5.9944448,116.0903752,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7e3dd2b2a563e441!8m2!3d5.9944448!4d116.0903752" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Petronas Bakut</h3>
+                    <p>Kampung Bakut, 89200 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Petronas+Bakut/@6.1313419,116.2147249,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x5297b2a242b73a73!8m2!3d6.1313419!4d116.2147249" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>66 Marketplace Likas</h3>
+                    <p>Mike 4.5, Jalan Commercial, Kampung Likas, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/66+Marketplace+Likas/@5.9924201,116.1084849,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x497d60ea87ab0dc6!8m2!3d5.9924201!4d116.1084849" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>AADC Café</h3>
+                    <p>Kionsom, Jalan Bantayan, Inanam, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/ADC+Driving+Institute/@5.9633372,116.1294702,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8e7e08a74bd44aff!8m2!3d5.9633372!4d116.1294702" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Asian Cuisine Restaurant (Likas Plaza)</h3>
+                    <p>Lot 17, Phase 2, Likas Plaza, Jalan Pasir, Likas, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Asian+Cuisine+Restaurant+(Likas+Plaza)/@5.9923326,116.1086218,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x85b120df8fa1553b!8m2!3d5.9923326!4d116.1086218" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>G-Mart Cold Storage Sdn Bhd</h3>
+                    <p>Block ST, University Utama Square 2 Complex, Jalan Norowot, Taman Perindustrian Kota Kinabalu, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/G-Mart+Cold+Storage+Sdn+Bhd/@6.092155,116.1829307,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x20e6e1bbd59e1371!8m2!3d6.0921593!4d116.1829378" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>PETRONAS JALAN LINTAS</h3>
+                    <p>Jln Lintas, 88200 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Petronas+Jln+Lintas+DD/@5.9225254,116.0644411,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x94e5832fe2162b78!8m2!3d5.9225332!4d116.0643737" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Syarikat Juta Hidayah</h3>
+                    <p>9, Jalan Kampung Tebobon, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Syarikat+Juta+Hidayah/@6.0532381,116.1680716,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x41c110cd1fb2cf2e!8m2!3d6.0532381!4d116.1680716" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Faheem Trading</h3>
+                    <p>Jln Sembulan Lama S/C, Kampung Sembulan, 88100 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Faheem+Trading/@5.9625146,116.0640625,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x83e50344852d09ea!8m2!3d5.9625177!4d116.064059" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>KASHMALA ENTERPRISE</h3>
+                    <p>KASHMALA ENTERPRISE Kg.Labuya, 89150 Labuya, 89150 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/KASHMALA+ENTERPRISE/@6.1894147,116.228932,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x5522dee611fe4a51!8m2!3d6.1894147!4d116.228932" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Man Mini Market</h3>
+                    <p>88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Futsal+Yayasan+Sabah/@6.0189182,116.1100623,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xab3a2505e0b44067!8m2!3d6.0189182!4d116.1100623" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Maliau Basin</h3>
+                    <p>88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Futsal+Yayasan+Sabah/@6.0189182,116.1100623,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xab3a2505e0b44067!8m2!3d6.0189182!4d116.1100623" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Marhaba Enterprise</h3>
+                    <p>89200 Kota Kinabalu, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Marhaba+Enterprise/@6.0934798,116.1552191,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xea87af794263987f!8m2!3d6.0935037!4d116.1551986" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Melawar Trading</h3>
+                    <p>19, 20 , 21, Jalan Polite NIK, KKIP, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Melawar+Trading/@6.0933388,116.1549673,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa3d9e2c44b569480!8m2!3d6.0933497!4d116.1549569" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Iqra Trading 2</h3>
+                    <p>89200 Kota Kinabalu, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Iqra+Trading+2/@6.0922062,116.1539544,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x32d8d3a57eb79e5e!8m2!3d6.0921764!4d116.1539891" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>MK.R Trading</h3>
+                    <p>SE-2 Lot3 UUS Telipok, 89200 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/MK.R+Trading/@6.091159,116.18422,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x63c8ba2c9f96b865!8m2!3d6.0911616!4d116.1842245" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Zara trading</h3>
+                    <p>SE-2 lot 3,lorong utama square, 88450 kota kinabalo sabah Talipok, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Zara+trading/@6.0910693,116.1842619,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3e1360b37e117cb2!8m2!3d6.0910693!4d116.1842619" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Desa Hasil Fresh Mart</h3>
+                    <p>NO.1 BLK SD GROUND FLOOR ,UNIVERSITY UTAMA SQUARE PH.1, JALAN KAYU MADANG TELIPOK, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Desa+Hasil+Fresh+Mart/@6.0907821,116.1844117,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xccc999d114c3d0b9!8m2!3d6.0907821!4d116.1844117" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>SM Mini Market</h3>
+                    <p>89200 Kota Kinabalu, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/SM+Mini+Market/@6.089512,116.1852701,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x1821b5a281350345!8m2!3d6.0895049!4d116.1852744" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Sufian Cafe</h3>
+                    <p>88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Sufian+Cafe/@6.0367256,116.1291012,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb3e76a3e5c30b2b4!8m2!3d6.0367256!4d116.1291012" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>BORNEO GEARS SDN. BHD. (Company No. 657326-V)</h3>
+                    <p>Petronas Jalan Petagas-putatan, Jalan Petagas, 88200 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/BORNEO+GEARS+SDN.+BHD.+(Company+No.+657326-V)/@5.9065392,116.0496703,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb77fbfa77b3a7f40!8m2!3d5.9065427!4d116.0496533" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Ewako MMA</h3>
+                    <p>Jalan Alamesra, Kampung Delima Melayu, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Ewako+MMA/@6.0314746,116.1350207,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x70562e0efbecd384!8m2!3d6.0314766!4d116.1349947" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Fauziah Trading</h3>
+                    <p>88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Fauziah+Trading/@6.0016918,116.1385452,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfba772ea4990c71a!8m2!3d6.0016918!4d116.1385452" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Friend Mini Mart</h3>
+                    <p>Inanam, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Friend+Mini+Mart/@5.9948838,116.1338055,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xba8ccbba54feeee8!8m2!3d5.994839!4d116.1338841" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Getgo @ Riverson</h3>
+                    <p>Unit No GMC-G-02, Gleneagles Medical Centre Riverson @ Sembulan, Off, Jalan Coastal, 88100 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Getgo+@+Riverson/@5.9681636,116.0645535,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x4954180ed832b179!8m2!3d5.9681522!4d116.0645656" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Health Wise Pharmacy</h3>
+                    <p>Tg - 9, 88 Market Place, Pitas, Lorong Pusat, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Health+Wise+Pharmacy/@5.9408598,116.0706135,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xdb5de6e05b9f4c0a!8m2!3d5.9408598!4d116.0706135" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Islam Enterprise</h3>
+                    <p>15, Jalan Putatan Ramayah, Bandar Putatan, 89500 Penampang, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Islam+Enterprise/@5.8988605,116.050492,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa3549e6b2fef3b60!8m2!3d5.898852!4d116.0505007" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Juara Futsal Arena</h3>
+                    <p>Jalan Ketiau Tombovo, 88200 Putatan, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Juara+Futsal+Arena/@5.8734845,116.0578125,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x5e55421edc0a3c1c!8m2!3d5.8734845!4d116.0578125" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Jyehhan Store</h3>
+                    <p>Lot 8, Blok A, Phase 1, Asia City, Lorong Singgah Mata 2, Pusat Bandar Kota Kinabalu, 88813 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Jyehhan+Store/@5.977149,116.073563,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x439b809dcca33bbf!8m2!3d5.977149!4d116.073563" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kedai Runcit Kg. Kiwatu</h3>
+                    <p>Jln Topokon Labuaya, 89150 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kg.+Kiwatu/@6.1888497,116.2376251,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbc80a219f2397fe!8m2!3d6.1888497!4d116.2376251" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kojasa Mart Anjung Selera</h3>
+                    <p>Lot Mini Market, Ground Floor, Anjung Selera Teluk Likas, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kojasa+Mart+Anjung+Selera/@6.0095874,116.1108411,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6d50023cbc6688ef!8m2!3d6.0095874!4d116.1108411" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Rh Trading</h3>
+                    <p>88400 Kota Kinabalu, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Rh+Trading/@6.0701561,116.1554134,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd2fd51f1b65e3c0c!8m2!3d6.0700947!4d116.1555115" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Sinar Damai Enterprise(SDETuaran)</h3>
+                    <p>No.28 Phase 2B-1 Taman Sinar Jaya 89208, 89150 Tuaran, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Sinar+Damai+Enterprise(SDETuaran)/@6.19105,116.2169189,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd26558923d0b7c42!8m2!3d6.19105!4d116.2169189" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Petron Ulam South</h3>
+                    <p>Jalan Bunga Raja Kayu, Taman Bunga Raja (Phase 3 & 4), 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Petron+Ulam+South/@5.9670203,116.1079104,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7773f50a76bce7a1!8m2!3d5.9670203!4d116.1079104" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Z.A Enterprise</h3>
+                    <p>Labuan, 87000, Labuan Federal Territory</p>
+                    <strong>
+                        <a href="" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kedai Runcit MZ Kg. Unggun</h3>
+                    <p>Kg unggun, Sepanggar, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kedai+Runcit+MZ+Kg.+Unggun/@6.0547388,116.1482839,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x644b45b92bbad9b5!8m2!3d6.0547172!4d116.1483219" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Rambutan Code Academy</h3>
+                    <p>Lot 10, Level 6, Block A Lorong Lebuh Sutera Sutera Avenue, 88100 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Elevate+Academy+of+Technology+%26+Innovation/@5.9677102,116.0656906,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x433a9c290d3a67c6!8m2!3d5.9677102!4d116.0656906" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Ibis Styles @ Kota Kinabalu</h3>
+                    <p>1, Jln Taipan 28, Inanam, 88450 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/ibis+Styles+Kota+Kinabalu+Inanam/@5.9937722,116.139636,17z/data=!3m1!4b1!4m8!3m7!1s0x0:0xc25ec589513eaa0f!5m2!4m1!1i2!8m2!3d5.9937722!4d116.139636" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Afreen Store</h3>
+                    <p>Jalan Semarak, Bandar Papar, 89600 Papar, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Afreen+Store/@5.7350761,115.9328307,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x984187db512cd50d!8m2!3d5.7350658!4d115.9328214" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Kedai Sin Wei Leng</h3>
+                    <p>Lot 47, Jalan Chan Fook, Bandar Papar, 89600 Papar, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Kedai+Sin+Wei+Leng/@5.7349989,115.9332924,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa20ec356d5aca18b!8m2!3d5.7349909!4d115.9332995" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Pribumi Mini Market</h3>
+                    <p>89500 Papar, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Pribumi+Mini+Market/@5.8292048,116.0438284,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3645b7468d0c2240!8m2!3d5.8292048!4d116.0438284" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Hamed Mini Market</h3>
+                    <p>89150 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Hamed+Mini+Market/@6.3567025,116.432992,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8b7c2926ee177917!8m2!3d6.3567034!4d116.4329919" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Family Trading</h3>
+                    <p>89150 Kota Belud, Sabah, Malaysia</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Family+Trading/@6.3571599,116.4333644,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x39f5f3dcc90eb3ed!8m2!3d6.3571652!4d116.4333237" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>ASIA MART (KOTA BELUD)</h3>
+                    <p>Jalan By Pass Kudat, Jalan Sembirai, 89150 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/ASIA+MART+(KOTA+BELUD)/@6.3725602,116.4109048,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa6f94a7c4a4dfe69!8m2!3d6.3725602!4d116.4109048" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Gulam Superstore</h3>
+                    <p>No. 19 & 20, Jalan Datu Mardan, Sabah, 89158 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Gulam+Superstore/@6.3555166,116.4305488,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x46ed5932704668d9!8m2!3d6.3555363!4d116.4305499" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Timpaus Transit Mini Market</h3>
+                    <p>Jln Kota Belud Bypass, 89150 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Timpaus+Transit+Mini+Market/@6.3758706,116.4105085,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8990125b6c509985!8m2!3d6.3759098!4d116.4105708" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Ismail Enterprise</h3>
+                    <p>89150 Kota Belud, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Ismail+Enterprise/@6.3824351,116.3798654,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8a8bafe1675f3aab!8m2!3d6.382428!4d116.379868" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Bataras Hypermarket Bugaya</h3>
+                    <p>Pekan Semporna, 91308 Semporna, Sabah</p>
+                    <strong>
+                        <a href="#" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Bataras Hypermarket, Menggatal</h3>
+                    <p>88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Bataras+Hypermarket,+Manggatal/@6.029851,116.1472447,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x837e1befb2d8f454!8m2!3d6.029851!4d116.1472447" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Bataras Superstore</h3>
+                    <p>Lorong Plaza Wawasan, Api-api Centre, 88000 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Bataras+Superstore/@5.9741993,116.0677066,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb7a7668db130496e!8m2!3d5.9741993!4d116.0677066" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Servay Hypermarket</h3>
+                    <p>Lorong Bandar Perdana 6, 91100 Lahad Datu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Servay+Hypermarket/@5.0261488,118.295683,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe3b74551de96a86a!8m2!3d5.0261515!4d118.2956831" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Bataras 1 Borneo Mall</h3>
+                    <p>139, Jalan Sepangar, 88400 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/1+Borneo+Mall/@6.0348008,116.1290794,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x24ba9e06e5c069e!8m2!3d6.0348008!4d116.1290794" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>Bataras Hypermarket Bundusan</h3>
+                    <p>Jalan Bundusan, 88300 Kota Kinabalu, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Bataras+Hypermarket/@5.9407929,116.1028766,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xcc0573e56b41d976!8m2!3d5.9407524!4d116.1028639" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="outlets-name">
+                    <h3>BATARAS HYPERMARKET SEMPORNA</h3>
+                    <p>91308 Semporna, Sabah</p>
+                    <strong>
+                        <a href="https://www.google.com/maps/place/Bataras+Hypermarket+Bugaya/@4.4659463,118.5899197,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x5c16888473fadfa6!8m2!3d4.4659463!4d118.5899197" target="_blank">Maps</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <!--Locations end here-->
+
+    <!--Locations problems
+        
+    - No address available
+    1. Z.A enterprise
+    2. Bataras hypermarket bugaya
+    
+    - Same address
+    1. bataras bugaya and bataras semporna
+    -->
 </body>
 
 </html>

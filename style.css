@@ -1,0 +1,68 @@
+.locations{
+    margin:1rem 0;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1rem;
+}
+
+.locations .container{
+    border:1px solid black;
+    max-width:300px;
+    width:100%;
+    height:180px;
+    font-size: .9rem;
+    border-radius: 20px;
+    transition: 0.3s;
+    background-color:rgb(216, 197, 175);
+    font-family: sans-serif;
+}
+
+h1{
+    font-family:sans-serif;
+}
+
+.locations .outlets-name{
+    text-align:center;
+}
+
+.locations .container:hover{
+    border:3px dashed black;
+}
+
+.locations .outlets-name{
+   justify-content: space-between; 
+}
+
+.locations .outlets-name a{
+    text-decoration: none;
+    color:black;
+    font-family:Arial;
+    transition: 0.3s;
+}
+
+.locations .outlets-name a:hover{
+    text-decoration: underline;
+}
+
+.search-location{
+    width:30%;
+    border:3px inset black;
+    border-radius:8px;
+    display:flex;
+    flex-direction: center;
+    align-items: center;
+    height:25px;
+    background-color:rgb(196, 222, 255);
+}
+
+.search-location input{
+   border:none;
+   outline:none;
+   box-shadow:none;
+   width:95%;
+   background-color:rgb(196, 222, 255);
+}
+
+
+
+
