@@ -28,15 +28,13 @@ h1{
 
 .locations .outlets-name{
     text-align:center;
-    padding:10px;
+    margin-bottom:20px;
+    margin:12px;
+    justify-content: space-between
 }
 
 .locations .container:hover{
     border:4px solid white;
-}
-
-.locations .outlets-name{
-   justify-content: space-between; 
 }
 
 .locations .outlets-name a{
@@ -95,6 +93,8 @@ h1{
     background-color:black;
     color:white;
 }
+
+
 
 
 
