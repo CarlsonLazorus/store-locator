@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* Scrollbars: */
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffc600;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #212121;
+}
+
+/* Google Maps map: */
+#map {
+    height: 100vh;
+}
+
+
+/* Title */
+.title {
+    position: absolute;
+    top: 8rem;
+    left: 4rem;
+    font-size: 5rem;
+    z-index: 30;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    /* color: #333; */
+
+    /*background: linear-gradient(to right, #53549D, #474555, #ACA9BB);*/
+    background: linear-gradient(to right, #ffc600, #efc737, #c49900);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*border-bottom: 1px solid #ACA9BB;*/
+    border-bottom: 1px solid #212121;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Search container */
+.search-container {
+    width: 40vw;
+    max-width: 400px;
+    height: 6rem;
+    background-color: #212121;
+    position: absolute;
+    z-index: 30;
+    top: 16rem;
+    left: 4rem;
+    border-radius: 20px;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.726);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+.search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search input {
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search i {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Stores list */
+.stores-list-container {
+    width: 40vw;
+    max-width: 400px;
+    background-color: white;
+    position: absolute;
+    z-index: 30;
+    top: 24rem;
+    left: 4rem;
+    border-radius: 10px;
+    bottom: 20px;
+    max-height: 800px;
+    overflow: hidden;
+    -webkit-box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.stores-list {
+    overflow-y: scroll;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+/* Store containers: */
+
+.store-container-background {
+    display: flex;
+    width: 100%;
+    padding: 0 8px;
+    margin: 12px 0;
+    border-radius: 8px;
+    transition: ease-in-out 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.store-container-background:hover {
+    background-color: #6f6f8936;
+}
+
+.store-container-background:focus,
+.store-container-background:active {
+    background-color: #6f6f8936;
+}
+
+.store-container {
+    border-bottom: 1px solid #979797;
+    display: flex;
+    cursor: pointer;
+}
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-container-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .87);
+}
+
+.store-address {
+    font-size: 1.5rem;
+    color: #514C4C;
+    margin-top: 1rem;
+}
+
+.store-phone-number {
+    display: flex;
+    align-items: center;
+    color: #B5ADAD;
+    margin-top: 1rem;
+}
+
+.store-number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-address span {
+    display: block;
+}
+
+.store-number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36364b;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+/* Store Info Window: */
+.store-info-window {
+    min-width: 300px;
+    font-size: 1.1em;
+    padding: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.store-info-name {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .87);
+}
+
+.store-info-status {
+    margin-top: 6px;
+    border-bottom: 1px solid #00000029;
+    padding-bottom: 7px;
+}
+
+.store-info-address,
+.store-info-phone {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.store-info-address .circle,
+.store-info-phone .circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #514C4C;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 8px;
+}
+
+
+
+/* Media queries: */
+
+@media screen and (max-width: 640px) {
+
+    .title {
+        display: flex;
+        top: auto;
+        font-size: 1.4em;
+        line-height: 1em;
+        /* margin-bottom: 3em; */
+        left: 2em;
+
+        background: linear-gradient(to right, #8e8eaf, #656580);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: #ffc600;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        background-color: #fff;
+    }
+
+    #map {
+        height: 55vh;
+    }
+
+    /* Stores list */
+    .stores-list-container {
+        display: block;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        height: 30vh;
+        width: 100vw;
+        max-width: 100vw;
+        border-radius: 0px;
+    }
+
+    .store-number {
+        visibility: hidden;
+    }
+
+    .search-container {
+        display: block;
+        height: 5vh;
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 65vh;
+        background-color: #000;
+        border-radius: 0px;
+    }
+
+    /* .search {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    } */
+
+    .search input {
+        width: 100%;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    /* Store Info Window: */
+    .store-info-window {
+        display: contents;
+        min-width: 200px;
+        font-size: 1.1em;
+        padding: 8px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .store-info-name {
+        text-align: center;
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: rgba(0, 0, 0, .87);
+    }
+
+    .store-info-status {
+        text-align: center;
+        margin-top: 6px;
+        border-bottom: 1px solid #00000029;
+        padding-bottom: 7px;
+    }
+
+    .store-info-address,
+    .store-info-phone {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .store-info-address .circle,
+    .store-info-phone .circle {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        color: #514C4C;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-right: 8px;
+    }
+}
+
+
+
+

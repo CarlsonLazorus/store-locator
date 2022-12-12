@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka Drinks Store Locator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./media/canned.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="js/store-data.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="heading">
+        <div class="title">Find a Store</div>
+    </div>
+    <div class="search-container">
+        <div class="search">
+            <input id="inputValue" onkeyup="searchStores()" type="text" placeholder="Enter store name/zip code">
+            <i id="myBtn" class="fas fa-search" onclick="searchStores()"></i>
+        </div>
+
+    </div>
+    <div class="stores-list-container">
+        <div class="stores-list">
+            <div class="store-container">
+                <div class="store-info-container">
+                    <div class="store-address">
+                        <!--Output if there is no internet connection-->
+                        <span>2nd Floor, Block I, Lot 65, (DBKK No. 2, 2, Lrg Lintas Square, Lintas</span>
+                        <span>88300 Kota Kinabalu, Sabah</span>
+                    </div>
+                    <div class="store-phone-number">
+                        088-301 376
+                    </div>
+                </div>
+                <div class="store-number-container">
+                    <div class="store-number">
+                        1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="./js/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL2R5zhwO_JAXjcAtVChCe-1qOWdXzuw4&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
