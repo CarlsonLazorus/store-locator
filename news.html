@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="news.css">
 </head>
-<script>
-
-    //cards animation design 
-
-</script>
 <body>
     <table class="banner-table">
         <tr>
@@ -31,38 +26,23 @@
         </tr>
     </table>
 
-    <!--<i class="fas fa-arrow-circle-right">-->
-    <table class="filtering-table">
-        <div class="filtering">
-            <tr>
-                <td>
-                    <a href="#">ALL POSTS</a>
-                </td>
-                
-                <td>
-                    <a href="#">PRODUCTS</a>
-                </td>
-
-                <td>
-                    <a href="#">EVENTS</a>
-                </td>
-
-                <td>
-                    <a href="#">LATEST NEWS</a>
-                </td>
-            </tr>
-        </div>
-    </table>
-
+    <div class="filtering-table" id="filtering-table">
+        <ul class="indicator">
+            <li data-filter="all" class="active">ALL POSTS</li>
+            <li data-filter="products">PRODUCTS</li>
+            <li data-filter="events">EVENTS</li>
+            <li data-filter="latestNews">LATEST NEWS</li>
+        </ul>
+    </div>
 </br></br>
 
     <!--cards-->
-    <div class="news">
-        <div class="news-container">
+    <div class="news" id="news">
+        <div class="news-container" data-item="latestNews">
             <img src="image/fruit.jpg" alt="dummy">
             <div>
                 <div class="news-card">
-                    
+                    <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>The list</h2>
                     <p>Calcius mentioned on national television as a Healthier Energy Drink Alternative by the...</p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -70,10 +50,11 @@
             </div>
         </div>
 
-        <div class="news-container">
+        <div class="news-container" data-item="latestNews">
             <img src="image/trees.jpg" alt="dummy">
             <div>
                 <div class="news-card">
+                    <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>Kroger Launch</h2>
                     <p>Into the grovery channel as it strengthens its partnership with Kroger, the largest U.S. grocery store chain, on over 1000 locations...</p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -81,10 +62,11 @@
             </div>
         </div>
 
-        <div class="news-container">
+        <div class="news-container" data-item="products">
             <img src="image/lol.jpg" alt="dummy">
             <div>
                 <div class="news-card">
+                    <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing grapefruit melon</h2>
                     <p>Grapefruit melon green tea which will initially launch at the 2019 NACS show, presented by the national association of convenience stores, in atlanta at boooth</p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -92,10 +74,11 @@
             </div>
         </div>
 
-        <div class="news-container">
+        <div class="news-container" data-item="events">
             <img src="image/dummy2.png" alt="dummy">
             <div>
                 <div class="news-card">
+                    <h3>10/18/19 | EVENTS</h3>
                     <h2>Live Fit tour</h2>
                     <p>Celcius is launching its first national guerilla marketing tour, which will make its way across the U.S. The live fit tour will officially kick off in NYC on september 7th with a celcius branded pop up fitness event in union square. </p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -103,10 +86,11 @@
             </div>
         </div>
 
-        <div class="news-container">
+        <div class="news-container" data-item="products">
             <img src="image/dummy3.png" alt="dummy">
             <div>
                 <div class="news-card">
+                    <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing Jackfruit</h2>
                     <p>Jackfruit to be available in new celsies heat</p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -114,10 +98,11 @@
             </div>
         </div>
 
-        <div class="news-container">
-            <img src="image/chips.png" alt="dummy">
+        <div class="news-container" data-item="events">
+            <img src="image/chips.png" alt="dummy"> 
             <div>
                 <div class="news-card"> 
+                    <h3>10/18/19 | EVENTS</h3>
                     <h2>Eureka drink</h2>
                     <p>hydrated and energized drink after intense exercise.</p>
                     <a href="#" target="_blank">READ MORE</a>
@@ -133,3 +118,32 @@
     </div><br>
 </body>
 </html>
+<script type="text/javascript">
+    let indicator = document.querySelector('.indicator').children;
+    let main = document.querySelector('.news').children;
+
+    for(let i = 0 ; i< indicator.length; i++){
+        indicator[i].onclick=function(){
+            for(let x = 0;x<indicator.length;x++){
+                indicator[x].classList.remove('active');
+            }
+
+            this.classList.add('active');
+            const displayItems = this.getAttribute('data-filter');
+            for(let z = 0;z< main.length; z++){
+                main[z].style.transform = 'scale(0)';
+                setTimeout(() =>{
+                    main[z].style.display = 'none';
+                }, 500);
+
+                if((main[z].getAttribute('data-item') == displayItems) || displayItems == 'all')
+                {
+                    main[z].style.transform = 'scale(1)';
+                    setTimeout(() =>{
+                        main[z].style.display = 'block';
+                    }, 500);
+                }
+            }
+        }
+    }
+</script>

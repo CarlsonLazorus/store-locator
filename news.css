@@ -36,17 +36,20 @@ body{
 
 }   
 
-.filtering-table{
+.filtering-table ul{
     width:80%;
     background-color:black;
     color:white;
     margin:auto;
     padding:6px;
     text-align:center;
+    display:flex;
+    justify-content: space-around;
 }
 
-.filtering-table a{
+.filtering-table ul li{
     text-decoration: none;
+    list-style-type: none;
     color:white;
     border:1px solid white;
     padding:10px 15px;
@@ -54,7 +57,9 @@ body{
     letter-spacing: 1px;
 }
 
-.filtering-table a:hover{
+.filtering-table ul li:hover,
+.filtering-table ul li.active{
+    cursor: pointer;
     border:1px solid black;
     color:black;
     background-color:white;
@@ -73,7 +78,7 @@ body{
     border:2px solid black;
     max-width:360px;
     width:360px;
-    height:480px;
+    height:535px;
     font-size: .9rem;
     border-radius: 11px;
     transition: 0.3s;
@@ -101,13 +106,22 @@ body{
     display:flex;
     flex-direction: column;
     justify-content:flex-start;
-    height:250px;
+    height:300px;
 }
 
 .news .news-card h2{
     margin-left: 10px;
     text-decoration:none;
     width:80%;
+    padding-top:0px;
+}
+
+.news .news-card h3{
+    margin-left: 10px;
+    text-decoration:none;
+    width:80%;
+    padding-top:0px;
+    color:grey;
 }
 
 .news .news-card p{
