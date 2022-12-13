@@ -4,6 +4,10 @@ body{
     background-color:black;
 }
 
+.banner-table{
+    width:100%;
+}
+
 .top-image img{
     width:100%;
     height:400px;
@@ -101,8 +105,15 @@ body{
     transform:scale(1.05);
 }
 
+.news .news-card img{
+    margin:0px 10px;
+}
+
+.news .news-card img:hover{
+    transform:scale(1);
+}
+
 .news .news-card{
-    overflow:visible;
     display:flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -131,7 +142,7 @@ body{
     height:100%;
 }
 
-.news .news-card a{
+.news .news-card button{
     border:1px solid white;
     background-color:black;
     color:white;
@@ -142,7 +153,8 @@ body{
     margin:5px 120px;
 }
 
-.news .news-card a:hover{
+.news .news-card button:hover{
+    cursor:pointer;
     text-decoration:underline;
     border:1px solid black;
     color:black;
@@ -170,5 +182,96 @@ body{
     color:black;
 }
 
+.modal{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform:scale(1.1);
+}
 
+.modal-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    padding:1rem 1.5rem;
+    width:24rem;
+    border-radius:0.5rem;
+}
+
+.close{
+    margin-left:97%;
+    display:block;
+    width:1.5rem;
+    line-height:1.3rem;
+    text-align: center;
+    cursor:pointer;
+    border-radius:0.25rem;
+    background-color:lightgray;
+    margin-bottom:5px;
+}
+
+.close:hover{
+    background-color:darkgray
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition:visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+/*responsive design*/
+@media only screen and (max-width: 800px){
+    body{
+        margin:0px;
+    }
+
+    .banner-table td{
+        display:block;
+    }
+
+    .filtering-table ul{
+        padding-top:20px;
+        width:100%;
+    }
+
+    .news{
+        grid-template-columns: (1, 1fr);
+        display:block;
+    }
+
+    .news .news-container{
+        margin-top:20px;
+        max-width:500px;
+        width:100%;
+        height:545px;
+    }
+
+    .news .news-container img{
+        max-width:500px;
+        width:100%;
+        height:240px;
+        margin:auto;
+    }
+
+    .news .news-card a{
+        margin-bottom:20px;
+    }
+}
+
+@media only screen and (min-width:800px) and (max-width:1000px){
+    .news{
+        grid-template-columns: repeat(2, 1fr);
+        display:grid;
+    }
+}
 

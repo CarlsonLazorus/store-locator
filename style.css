@@ -94,6 +94,32 @@ h1{
     color:white;
 }
 
+@media only screen and (max-width:600px){
+    .locations{
+        grid-template-columns: repeat(1, 1fr);
+        display:block;
+    }
+
+    .locations .container{
+        margin:auto;
+        margin-top:20px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:800px){
+    .locations{
+        grid-template-columns: repeat(2, 1fr);
+        display:grid;
+    }
+}
+
+@media only screen and (min-width:800px) and (max-width:1000px){
+    .locations{
+        grid-template-columns: repeat(3, 1fr);
+        display:grid;
+    }
+}
+
 
 
 

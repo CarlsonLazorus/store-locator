@@ -45,7 +45,17 @@
                     <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>The list</h2>
                     <p>Calcius mentioned on national television as a Healthier Energy Drink Alternative by the...</p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/fruit.jpg" alt="dummy">
+                            <h3>10/18/19 | LATEST NEWS</h3>
+                            <h2>The list</h2>
+                            <p>Calcius mentioned on national television as a Healthier Energy Drink Alternative by the...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,7 +67,17 @@
                     <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>Kroger Launch</h2>
                     <p>Into the grovery channel as it strengthens its partnership with Kroger, the largest U.S. grocery store chain, on over 1000 locations...</p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/trees.jpg" alt="dummy">
+                            <h3>10/18/19 | LATEST NEWS</h3>
+                            <h2>Kroger Launch</h2>
+                            <p>Into the grovery channel as it strengthens its partnership with Kroger, the largest U.S. grocery store chain, on over 1000 locations...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +89,17 @@
                     <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing grapefruit melon</h2>
                     <p>Grapefruit melon green tea which will initially launch at the 2019 NACS show, presented by the national association of convenience stores, in atlanta at boooth</p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/lol.jpg" alt="dummy">
+                            <h3>10/18/19 | PRODUCTS</h3>
+                            <h2>Introducing grapefruit melon</h2>
+                            <p>Grapefruit melon green tea which will initially launch at the 2019 NACS show, presented by the national association of convenience stores, in atlanta at boooth</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,7 +111,17 @@
                     <h3>10/18/19 | EVENTS</h3>
                     <h2>Live Fit tour</h2>
                     <p>Celcius is launching its first national guerilla marketing tour, which will make its way across the U.S. The live fit tour will officially kick off in NYC on september 7th with a celcius branded pop up fitness event in union square. </p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/dummy2.png" alt="dummy">
+                            <h3>10/18/19 | EVENTS</h3>
+                            <h2>Live Fit tour</h2>
+                            <p>Celcius is launching its first national guerilla marketing tour, which will make its way across the U.S. The live fit tour will officially kick off in NYC on september 7th with a celcius branded pop up fitness event in union square.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,7 +133,17 @@
                     <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing Jackfruit</h2>
                     <p>Jackfruit to be available in new celsies heat</p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/dummy3.png" alt="dummy">
+                            <h3>10/18/19 | PRODUCTS</h3>
+                            <h2>Introducing Jackfruit</h2>
+                            <p>Jackfruit to be available in new celsies heat</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,8 +155,19 @@
                     <h3>10/18/19 | EVENTS</h3>
                     <h2>Eureka drink</h2>
                     <p>hydrated and energized drink after intense exercise.</p>
-                    <a href="#" target="_blank">READ MORE</a>
+                    <button class="myBtn">READ MORE</button>
+
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">X</span>
+                            <img src="image/chips.png" alt="dummy">
+                            <h3>10/18/19 | EVENTS</h3>
+                            <h2>Eureka drink</h2> 
+                            <p>hydrated and energized drink after intense exercise.</p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
 
@@ -119,6 +180,9 @@
 </body>
 </html>
 <script type="text/javascript">
+
+    //filtering
+
     let indicator = document.querySelector('.indicator').children;
     let main = document.querySelector('.news').children;
 
@@ -145,5 +209,22 @@
                 }
             }
         }
+    }
+</script>
+
+<script>
+    //get modal
+    const modal = document.getElementsByClassName("modal");
+    const trigger = document.getElementsByClassName('myBtn');
+    const triggerArray = Array.from(trigger).entries();
+    const closeButton = document.getElementsByClassName("close");
+
+    for(let [index, myBtn] of triggerArray) {
+        const toggleModal = () => {
+            modal[index].classList.toggle('show-modal');
+        }
+
+        myBtn.addEventListener("click", toggleModal);
+        closeButton[index].addEventListener("click", toggleModal);
     }
 </script>
