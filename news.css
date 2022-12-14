@@ -13,6 +13,10 @@ body{
     height:400px;
 }
 
+.banner-title{
+    display:block;
+}
+
 .banner-title h1{
     font-family:sans-serif;
     text-align:left;
@@ -20,7 +24,7 @@ body{
     letter-spacing: 1px;
 }
 
-.banner-title a{
+.banner-title button{
     font-family:sans-serif;
     border:1px solid white;
     text-align: left;
@@ -32,13 +36,19 @@ body{
     letter-spacing: 1px;
 }
 
-.banner-title a:hover{
+.banner-title button:hover{
+    cursor: pointer;
     text-decoration:underline;
     color:black;
     background-color:white;
     border:1px solid black;
 
 }   
+
+.banner-title img{
+    width:360px;
+    height:230px;
+}
 
 .filtering-table ul{
     width:80%;
@@ -103,10 +113,6 @@ body{
 
 .news .news-container img:hover{
     transform:scale(1.05);
-}
-
-.news .news-card img{
-    margin:0px 10px;
 }
 
 .news .news-card img:hover{
@@ -181,6 +187,13 @@ body{
     background-color:white;
     color:black;
 }
+
+.modal img{
+    margin:0px 10px;
+    width:360px;
+    height:230px;
+}
+
 
 .modal{
     position:fixed;
