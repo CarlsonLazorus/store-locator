@@ -332,7 +332,7 @@ function createMarker(latlng, name, address, openStatusText, phoneNumber, websit
                     </div>
                     <a href="https://www.google.com/maps/dir/?api=1&destination=${latlng}" style="color: #514C4C" target="_blank">${address}</a>
                 </div>
-                <div class="store-info-address">
+                <div class="store-info-phone">
                     <div class="circle">
                         <i class="fa fa-phone"></i>
                     </div>
@@ -379,7 +379,7 @@ function createMarker(latlng, name, address, openStatusText, phoneNumber, websit
                     </div>
                 <a href="https://www.google.com/maps/dir/?api=1&destination=${latlng}" style="color: #514C4C" target="_blank">${address}</a>
                 </div>
-                <div class="store-info-address">
+                <div class="store-info-phone">
                     <div class="circle">
                         <i class="fa fa-phone"></i>
                     </div>
