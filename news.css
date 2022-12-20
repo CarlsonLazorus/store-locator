@@ -1,7 +1,6 @@
 body{
     margin:0px;
-    font-family: 'DynaPuff', cursive;
-    font-family: 'Mouse Memoirs', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color:black;
 }
 
@@ -27,32 +26,34 @@ body{
 }
 
 .banner-title h1{
-    font-family:sans-serif;
     text-align:left;
     color:white;
     letter-spacing: 1px;
 }
 
-.banner-title button{
-    font-family:sans-serif;
-    border:1px solid white;
+.banner-title .myBtn{
+    display:flex;
     text-align: left;
     text-decoration:none;
     background-color:black;
     color:white;
-    padding:5px;
-    transition:0.3s;
     letter-spacing: 1px;
-    font-size:20px;
+    font-size:15px;
+    padding:0px;
 }
 
-.banner-title button:hover{
+.banner-title .myBtn:hover .readMore {
+    transition:0.3s;
     cursor: pointer;
     color:black;
     background-color:#fcd700;
-    border:1px solid black;
-
+    border:1px solid white;
 }   
+
+.banner-title .readMore{
+    border:1px solid white;
+    padding:10px;
+}
 
 .banner-title img{
     width:360px;
@@ -104,7 +105,6 @@ body{
     font-size: .9rem;
     border-radius: 11px;
     transition: 0.3s;
-    font-family: sans-serif;
     background-color:rgb(206, 204, 204);
     overflow:hidden;
     display:flex;
@@ -156,33 +156,44 @@ body{
     height:100%;
 }
 
-.news .news-card button{
-    border:1px solid white;
-    background-color:black;
+.news .news-card .myBtn{
+    border:0px solid white;
     color:white;
     text-decoration:none;
-    padding:10px;
     transition:0.3s linear;
     letter-spacing: 1px;
-    margin:5px 108px;
-    width:150px;
+    width:50%;
+    background-color:rgb(206, 204, 204);
+    display:flex;
     font-size:15px;
+    margin:auto;
 }
 
-.news .news-card button:hover{
+.news .news-card .card-readmore{
+    background-color:black;
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+.news .news-card .myBtn:hover .card-readmore{
+    transition:0.3s;
     cursor:pointer;
-    border:1px solid black;
+    border:1px solid white;
     color:black;
     background-color: #fcd700;
 }
 
-.view-more-button{
-    padding:20px;
+.view-more-button a{
     margin:auto;
     text-align: center;
+    display:flex;
+    text-decoration:none;
+    justify-content: center;
+    width:19%;
 }
 
-.view-more-button a{
+.view-more-button .view-more-card{
     border:2px solid white;
     text-decoration: none;
     color:white;
@@ -191,9 +202,8 @@ body{
     letter-spacing: 1px;
 }
 
-.view-more-button a:hover{
-    text-decoration: underline;
-    background-color:white;
+.view-more-button a:hover .view-more-card{
+    background-color:#fcd700;
     color:black;
 }
 
@@ -317,10 +327,10 @@ body{
         margin:auto;
     }
 
-    .news .news-card button{
-        width:50%;
-        margin:auto ;
-        margin-bottom:10px;
+    .news .news-card .myBtn{
+        width:300px;
+        justify-content: center;
+        margin-bottom:5px;
     }
 
     .modal-content{
@@ -337,6 +347,10 @@ body{
     .close{
         width:1.7rem;
         line-height:1.5rem;
+    }
+
+    .view-more-button a{
+        width:auto;
     }
 }
 
@@ -369,16 +383,21 @@ body{
     }
 
     .banner-table .banner-title button{
-        padding:15px;
-        width:20%;
+        border:0px;
+        padding:15px 0px;
+        width:auto;
         text-align:center;
-        font-size:18px;
+        font-size:15px;
         margin-bottom:5px;
     }
 
     .news{
         grid-template-columns: repeat(2, 1fr);
         display:grid;
+    }
+
+    .view-more-button a{
+        width:auto;
     }
 }
 
