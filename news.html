@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eureka - News</title>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="news.css">
 </head>
+<script src="https://kit.fontawesome.com/8156a33a91.js" crossorigin="anonymous">
+</script>
 <body>
     <table class="banner-table">
         <tr>
             <td>
                 <div class="top-image">
-                    <img src="image/eurekadrink.png" alt="EurekaDrink" >
+                    <img class="imageBtn" src="image/eurekadrink.png" alt="EurekaDrink" >
                 </div>
             </td>
             <td>
                 <div class="banner-title">
+                    <h2>2/12/21 | LATEST NEWS</h2>
                     <h1>MALAYSIA'S 1ST NOOTROPIC BEVERAGE BRAND</h1>
 
-                    <button class="myBtn">READ MORE <i class="fa fa-plus"></i></button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </td>
         </tr>
@@ -40,73 +42,73 @@
     <!--cards-->
     <div class="news" id="news">
         <div class="news-container" data-item="latestNews">
-            <img src="image/fruit.jpg" alt="dummy">
+            <img class="imageBtn" src="image/fruit.jpg" alt="dummy">
             <div>
                 <div class="news-card">
                     <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>The list</h2>
                     <p>Calcius mentioned on national television as a Healthier Energy Drink Alternative by the...</p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="news-container" data-item="latestNews">
-            <img src="image/trees.jpg" alt="dummy">
+            <img class="imageBtn" src="image/trees.jpg" alt="dummy">
             <div>
                 <div class="news-card">
                     <h3>10/18/19 | LATEST NEWS</h3>
                     <h2>Kroger Launch</h2>
                     <p>Into the grovery channel as it strengthens its partnership with Kroger, the largest U.S. grocery store chain, on over 1000 locations...</p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="news-container" data-item="products">
-            <img src="image/lol.jpg" alt="dummy">
+            <img class="imageBtn" src="image/lol.jpg" alt="dummy">
             <div>
                 <div class="news-card">
                     <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing grapefruit melon</h2>
                     <p>Grapefruit melon green tea which will initially launch at the 2019 NACS show, presented by the national association of convenience stores, in atlanta at boooth</p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="news-container" data-item="events">
-            <img src="image/dummy2.png" alt="dummy">
+            <img class="imageBtn" src="image/dummy2.png" alt="dummy">
             <div>
                 <div class="news-card">
                     <h3>10/18/19 | EVENTS</h3>
                     <h2>Live Fit tour</h2>
                     <p>Celcius is launching its first national guerilla marketing tour, which will make its way across the U.S. The live fit tour will officially kick off in NYC on september 7th with a celcius branded pop up fitness event in union square. </p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="news-container" data-item="products">
-            <img src="image/dummy3.png" alt="dummy">
+            <img class="imageBtn" src="image/dummy3.png" alt="dummy">
             <div>
                 <div class="news-card">
                     <h3>10/18/19 | PRODUCTS</h3>
                     <h2>Introducing Jackfruit</h2>
                     <p>Jackfruit to be available in new celsies heat</p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="news-container" data-item="events">
-            <img src="image/chips.png" alt="dummy"> 
+            <img class="imageBtn" src="image/chips.png" alt="dummy"> 
             <div>
                 <div class="news-card"> 
                     <h3>10/18/19 | EVENTS</h3>
                     <h2>Eureka drink</h2>
                     <p>hydrated and energized drink after intense exercise.</p>
-                    <button class="myBtn">READ MORE</button>
+                    <button class="myBtn">READ MORE <i class="fa-regular fa-plus"></i></button>
                 </div>
                 
             </div>
@@ -193,11 +195,24 @@
 </body>
 </html>
 <script type="text/javascript">
-    //get modal
+    //get modal from image
+    const imagetrigger = document.querySelectorAll('.imageBtn');
+    const imagetriggerArray = Array.from(imagetrigger).entries();
+    //get modal from button
     const modal = document.getElementsByClassName("modal");
     const trigger = document.getElementsByClassName('myBtn');
     const triggerArray = Array.from(trigger).entries();
     const closeButton = document.getElementsByClassName("close");
+
+    for(let [index, imageBtn] of imagetriggerArray) {
+        if(index != 0){
+            const toggleModal = () => {
+                modal[index].classList.toggle('show-modal');
+            }
+
+            imageBtn.addEventListener("click", toggleModal);
+        }
+    }
 
     for(let [index, myBtn] of triggerArray) {
         const toggleModal = () => {

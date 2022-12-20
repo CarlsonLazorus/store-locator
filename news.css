@@ -1,6 +1,7 @@
 body{
     margin:0px;
-    font-family:sans-serif;
+    font-family: 'DynaPuff', cursive;
+    font-family: 'Mouse Memoirs', sans-serif;
     background-color:black;
 }
 
@@ -21,6 +22,10 @@ body{
     display:block;
 }
 
+.banner-title h2{
+    color:grey;
+}
+
 .banner-title h1{
     font-family:sans-serif;
     text-align:left;
@@ -38,13 +43,13 @@ body{
     padding:5px;
     transition:0.3s;
     letter-spacing: 1px;
+    font-size:20px;
 }
 
 .banner-title button:hover{
     cursor: pointer;
-    text-decoration:underline;
     color:black;
-    background-color:white;
+    background-color:#fcd700;
     border:1px solid black;
 
 }   
@@ -80,8 +85,7 @@ body{
     cursor: pointer;
     border:1px solid black;
     color:black;
-    background-color:white;
-    text-decoration: underline;
+    background-color:#fcd700;
 }
 
 .news{
@@ -160,15 +164,16 @@ body{
     padding:10px;
     transition:0.3s linear;
     letter-spacing: 1px;
-    margin:5px 120px;
+    margin:5px 108px;
+    width:150px;
+    font-size:15px;
 }
 
 .news .news-card button:hover{
     cursor:pointer;
-    text-decoration:underline;
     border:1px solid black;
     color:black;
-    background-color:white;
+    background-color: #fcd700;
 }
 
 .view-more-button{
@@ -265,8 +270,20 @@ body{
         width:100%;
     }
 
+    .banner-title h2{
+        width:95%;
+        margin:auto;
+        font-size:20px;
+    }
+
     .banner-title h1{
+        width:95%;
         font-size:25px;
+        margin:auto;
+    }
+
+    .banner-title button{
+        margin-left:13.62px;
     }
 
     .filtering-table ul{
@@ -303,7 +320,7 @@ body{
     .news .news-card button{
         width:50%;
         margin:auto ;
-        margin-bottom:5px;
+        margin-bottom:10px;
     }
 
     .modal-content{
@@ -343,12 +360,17 @@ body{
     }
 
     .banner-title h1{
+        margin-top:0px;
+        margin-bottom:0px;
+    }
+
+    .banner-title h2{
         margin-bottom:0px;
     }
 
     .banner-table .banner-title button{
-        padding:20px;
-        width:25%;
+        padding:15px;
+        width:20%;
         text-align:center;
         font-size:18px;
         margin-bottom:5px;
