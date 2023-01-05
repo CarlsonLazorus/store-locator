@@ -7,15 +7,74 @@
     <link rel="stylesheet" href="KotaBelud.css">
     <title>Kota Belud</title>
 </head>
+<script src="https://kit.fontawesome.com/8156a33a91.js" crossorigin="anonymous">
+</script>
+<script>
+    function magnify(imgID, zoom){
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        const icon1 = document.getElementsByClassName("mag")[0].style.display = "none";
+        const icon2 = document.getElementsByClassName("unMag")[0].style.display = "block";
 
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        img.parentElement.insertBefore(glass, img);
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px ";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight /2;
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+
+        function moveMagnifier(e){
+            var pos, x, y;
+            e.preventDefault();
+            pos = getCursorPos(e);
+            x = pos.x;
+            y = pos.y;
+            if (x > img.width - (w / zoom)) {
+                x = img.width - (w / zoom);
+            }
+            if (x < w / zoom) {
+                x = w / zoom;
+            }
+            if (y > img.height - (h / zoom)) {
+                y = img.height - (h / zoom);
+            }
+            if (y < h / zoom) {
+                y = h / zoom;
+            }
+
+            glass.style.left = (x + w) + "px";
+            glass.style.top = (y - h) + "px";
+            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+        function getCursorPos(e){
+            var a , x = 0, y = 0;
+            e = e || window.event;
+            a = img.getBoundingClientRect();
+            x = e.pageX - a.left;
+            y = e.pageY - a .top;
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return{
+                x : x, y : y
+            };
+        }
+    }
+</script>
 <body>
     <div class="top-banner">
         <table style="border-collapse:collapse;">
             <tr>
                 <td class="picture"><img src="../pictures/Kota Belud MTB/IMG_9489.JPG"></td>
-                <td class="title">
-                    <h1>KOTA BELUD MTB OPEN 2022</h1>
-                    <h2>13 NOVEMBER 2022</h2>
+                <td class="title">  
+                    <h2 style="color:grey;">13 NOVEMBER 2022</h2>
+                    <h1 style="color:white;">KOTA BELUD MTB OPEN 2022</h1>
                 </td>
             </tr>
         </table>
@@ -48,7 +107,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/3.jpeg" 
@@ -78,7 +137,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/6.jpeg" 
@@ -138,7 +197,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/D205D40B-CB8B-47EE-A848-B2A2DB0658D0.jpeg" 
@@ -158,7 +217,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/F123D08E-B953-4794-8761-D173AA5AFFCA.jpeg"
@@ -188,7 +247,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9343.JPG" 
@@ -208,7 +267,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9345.JPG" 
@@ -228,7 +287,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9350.JPG" 
@@ -238,7 +297,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9351.JPG" 
@@ -258,7 +317,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9353.JPG" 
@@ -308,7 +367,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9379.JPG" 
@@ -338,7 +397,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9382.JPG" 
@@ -348,7 +407,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9383.JPG" 
@@ -378,7 +437,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9389.JPG" 
@@ -408,7 +467,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9393.JPG" 
@@ -448,7 +507,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9398.JPG" 
@@ -498,7 +557,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9408.JPG"
@@ -528,7 +587,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9411.JPG" 
@@ -538,7 +597,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9412.JPG" 
@@ -608,7 +667,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9421.JPG" 
@@ -638,7 +697,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9427.JPG" 
@@ -688,7 +747,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9440.JPG" 
@@ -698,7 +757,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9441.JPG" 
@@ -818,7 +877,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9470.JPG" 
@@ -828,7 +887,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9471.JPG" 
@@ -888,7 +947,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9482.JPG" 
@@ -898,7 +957,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9483.JPG" 
@@ -948,7 +1007,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9486.JPG" 
@@ -958,7 +1017,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9487(sharp).jpg" 
@@ -968,7 +1027,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9487.JPG" 
@@ -988,7 +1047,7 @@
             </div>
         </div>
 
-        <div class="event-container" id="event-container">
+        <div class="event-container" id="spans">
             <div>
                 <div class="event-picture">
                     <img src="../pictures/Kota Belud MTB/IMG_9489.JPG" 
@@ -999,510 +1058,559 @@
         </div>
     </div>
 
-    <!--Image zoom and slide-->
-
+    <!--Image slide-->
     <div class="modal" id="myModal">
-        <span class="close-cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <div class="my-slides">
+        <div class="modal-header">
+            <span class="close-cursor" onclick="closeModal()">&times;</span>
+            <button class="full-screen" id="full-screen" onclick="toggleFullScreen()" >
+                <i class='full fas fa-expand'></i>
+                <i class='shrink fas fa-compress'></i>
+            </button>
+            <button id="zoom" class="zoom" onclick="magnify('imgMag', 2)"><i class='mag fas fa-search-plus'></i><i class='unMag fas fa-search-minus'></i></button>
+            <button class="share-link" id="shareLink" onclick="openLink()"><i class="fas fa-share"></i></button>
+        </div>
+        <div class="modal-content" id="modal-content">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">1/97</div>
-                <img src="../pictures/Kota Belud MTB/1.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/1.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">2/97</div>
-                <img src="../pictures/Kota Belud MTB/2.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/2.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">3/97</div>
-                <img src="../pictures/Kota Belud MTB/3.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/3.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">4/97</div>
-                <img src="../pictures/Kota Belud MTB/4.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/4.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">5/97</div>
-                <img src="../pictures/Kota Belud MTB/5.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/5.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">6/97</div>
-                <img src="../pictures/Kota Belud MTB/6.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/6.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">7/97</div>
-                <img src="../pictures/Kota Belud MTB/7.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/7.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">8/97</div>
-                <img src="../pictures/Kota Belud MTB/8.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/8.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">9/97</div>
-                <img src="../pictures/Kota Belud MTB/9881AFC2-2332-482E-8148-3BE473E309C8.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/9881AFC2-2332-482E-8148-3BE473E309C8.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">10/97</div>
-                <img src="../pictures/Kota Belud MTB/B32071A8-5C86-4AA2-9470-4708426506B0.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/B32071A8-5C86-4AA2-9470-4708426506B0.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">11/97</div>
-                <img src="../pictures/Kota Belud MTB/CE92AF56-D7F8-42C9-B1E4-9B32BF9BAD85.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/CE92AF56-D7F8-42C9-B1E4-9B32BF9BAD85.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">12/97</div>
-                <img src="../pictures/Kota Belud MTB/D205D40B-CB8B-47EE-A848-B2A2DB0658D0.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/D205D40B-CB8B-47EE-A848-B2A2DB0658D0.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">13/97</div>
-                <img src="../pictures/Kota Belud MTB/E184F1D3-AF86-4787-A2D5-B2111F244F68.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/E184F1D3-AF86-4787-A2D5-B2111F244F68.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">14/97</div>
-                <img src="../pictures/Kota Belud MTB/F123D08E-B953-4794-8761-D173AA5AFFCA.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/F123D08E-B953-4794-8761-D173AA5AFFCA.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">15/97</div>
-                <img src="../pictures/Kota Belud MTB/FC21633B-C5B8-42F9-909C-FA347FA53039.jpeg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/FC21633B-C5B8-42F9-909C-FA347FA53039.jpeg" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">16/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9327.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9327.JPG" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">17/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9343.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9343.JPG" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">18/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9344.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9344.JPG" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">19/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9345.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9345.JPG" >
             </div>
     
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">20/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9346.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9346.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">21/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9350.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9350.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">22/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9351.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9351.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">23/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9352.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9352.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">24/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9353.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9353.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">25/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9354.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9354.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">26/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9355.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9355.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">27/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9356.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9356.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">28/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9357.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9357.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">29/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9379.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9379.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">30/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9380.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9380.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">31/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9381.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9381.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">32/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9382.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9382.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">33/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9383.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9383.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">34/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9386.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9386.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">35/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9387.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9387.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">36/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9389.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9389.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">37/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9390.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9390.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">38/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9391.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9391.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">39/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9393.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9393.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">40/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9394.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9394.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">41/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9396.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9396.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">42/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9397.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9397.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">43/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9398.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9398.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">44/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9400.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9400.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">45/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9405.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9405.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">46/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9406.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9406.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">47/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9407.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9407.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">48/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9408.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9408.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">49/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9409.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9409.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">50/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9410.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9410.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">51/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9411.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9411.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">52/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9412.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9412.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">53/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9413.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9413.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">54/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9414.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9414.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">55/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9415.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9415.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">56/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9417.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9417.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">57/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9418.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9418.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">58/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9420.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9420.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">59/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9421.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9421.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">60/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9422.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9422.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">61/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9426.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9426.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">62/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9427.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9427.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">63/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9428.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9428.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">64/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9434.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9434.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">65/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9435.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9435.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">66/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9436.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9436.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">67/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9440.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9440.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">68/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9441.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9441.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">69/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9443.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9443.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">70/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9445(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9445(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">71/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9445.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9445.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">72/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9449.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9449.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">73/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9450 (1).JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9450 (1).JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">74/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9450(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9450(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">75/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9450.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9450.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">76/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9451 (1).JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9451 (1).JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">77/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9451(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9451(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">78/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9451.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9451.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">79/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9457.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9457.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">80/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9470.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9470.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">81/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9471.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9471.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">82/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9473.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9473.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">83/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9478.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9478.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">84/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9479(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9479(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">85/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9479.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9479.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">86/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9481.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9481.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">87/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9482.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9482.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">88/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9483.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9483.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">89/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9484.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9484.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">90/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9485(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9485(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">91/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9485.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9485.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">92/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9486(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9486(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">93/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9486.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9486.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">94/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9487(sharp).jpg" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9487(sharp).jpg" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">95/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9487.JPG" style="width:100%; justify-content: center;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9487.JPG" style="width:100%; justify-content: center;">
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">96/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9488.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9488.JPG" >
             </div>
 
-            <div class="my-slides">
+            <div class="my-slides" id="my-slides">
                 <div class="imageNumber">97/97</div>
-                <img src="../pictures/Kota Belud MTB/IMG_9489.JPG" style="width:100%;">
+                <img id="imgMag" src="../pictures/Kota Belud MTB/IMG_9489.JPG" >
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!--Share modal-->
+            <div class="share-modal" id="share-modal">
+                <div class="share-modal-content">
+                    <span class="close" onclick="closeLink()">&times;</span>
+                    <ul >
+                        <li><a href="#"><i class="fa fa-facebook"></i>  Share on Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> Share on Twitter</a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i> Pin it</a></li>
+                        <li><a href="#"><i class="fa fa-download"></i> Download image</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
 </body>
 <script>
+    var card = document.getElementById('myModal');
+    var modalContent = document.getElementById('modal-content');
+    var modal = document.getElementById('share-modal');
+    var magnifier = document.getElementsByClassName("mag");
+
+    function openLink(){
+        document.getElementById('share-modal').style.display = "block";
+    }
+
+    function closeLink(){
+        document.getElementById('share-modal').style.display = "none";
+    }
+
    function openImage(){
     document.getElementById("myModal").style.display = "block";
+    document.querySelector(".full").style.display = "inline";
+    document.querySelector(".shrink").style.display = "none";
+    document.querySelector(".mag").style.display = "inline";
+    document.querySelector(".unMag").style.display = "none";
    }
 
    function closeModal(){
     document.getElementById("myModal").style.display = "none";
+    document.getElementById('share-modal').style.display = "none";
+    document.exitFullscreen();
    }
+
+   //full screen
+   function toggleFullScreen(){
+        if(card.requestFullscreen) {
+            card.requestFullscreen();
+            document.querySelector(".full").style.display = "none";
+            document.querySelector(".shrink").style.display = "inline";
+            this.addEventListener('click', document.exitFullscreen());
+        }
+    }
 
    var slideIndex = 1;
    showSlides(slideIndex);
@@ -1534,5 +1642,17 @@
 
     slides[slideIndex-1].style.display = "block";
    }
+
+   window.onclick = function(event){
+    if(event.target == modal){
+        modal.style.display = "none";
+    }else if(event.target == card){
+        if(toggleFullScreen){
+            card.style.display = "block";
+        }else{
+            card.style.display = "none";
+        }
+    }
+    }
 </script>
 </html>

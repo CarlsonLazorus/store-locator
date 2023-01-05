@@ -1,6 +1,7 @@
 body{
     background-color:black;
     margin:0px;
+    padding:0;
     font-family:'Lato', sans-serif;
 }
 
@@ -17,10 +18,6 @@ body{
     height:500px;
 }
 
-.top-banner table .title{
-    color:#fcd200;
-}
-
 .top-banner table .title h1, h2{
     margin-left:10px;
 }
@@ -29,11 +26,11 @@ body{
 }
 
 .event-title{
-    font-size:smaller;
+    font-size:20px;
     margin-top:50px;
     margin-left:20%;
     margin-bottom:50px;
-    width:60%;
+    width:70%;
     color:white;
 }
 
@@ -87,21 +84,23 @@ body{
     left:0;
     top:0;
     width:100%;
+    max-height:600px;
     height:100%;
-    overflow:auto;
-    object-fit: fill;
-    background-color:black;
+    overflow:contain;
+    background-color:rgba(0, 0, 0, 0.701);
 }
 
 .modal-content{
     position:relative;
-    background-color:#fefefe;
+    background-size:contain;
     margin:auto;
-    margin-top:40px;
+    margin-top:80px;
     margin-bottom:40px;
     padding:0px;
     width:90%;
     max-width:1200px;
+    display:flex;
+    justify-content: center;
 }
 
 .close-cursor{
@@ -128,9 +127,15 @@ body{
     cursor: pointer;
 }
 
+.prev{
+    left:0;
+    border-radius:3px 0 0 3px;
+    margin-left:20px;
+}
+
 .prev, .next{
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top:50%;
     width:auto;
     padding:16px;
@@ -147,6 +152,7 @@ body{
 .next{
     right:0;
     border-radius:3px 0 0 3px;
+    margin-right:20px;
 }
 
 .prev:hover, .next:hover{
@@ -161,11 +167,159 @@ body{
     top: 0;
 }
 
-.my-slides img{
-    padding:0px;
-    margin:0px;
+.my-slides{
+    max-width:700px;
+    max-height:400px;
 }
 
+.my-slides img{
+    max-width:700px;
+    max-height:450px;
+    width:auto;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    margin:auto;
+}
+
+#spans{
+    grid-column:span 2;
+    width:493px;
+}
+
+#spans .event-picture img{
+    width:493px;
+}
+
+.modal-header .full-screen{
+    right: 160px;
+    position: absolute;
+    top: 17px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border:0px;
+    font-size: 20px;
+}
+
+.modal-header .zoom{
+    right: 120px;
+    position: absolute;
+    top: 17px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border:0px;
+    font-size: 20px;
+}
+
+.modal-header .share-link{
+    right: 80px;
+    position: absolute;
+    top: 17px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border:0px;
+    font-size: 20px;
+}
+
+.modal-header button:hover{
+    cursor: pointer;
+    color:#999;
+}
+
+.modal .shrink{
+    display:none;
+}
+
+.modal .unMag{
+    display:none;
+}
+
+.img-magnifier-glass{
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
+}
+
+.fa{
+    text-align:center;
+    border-radius:1px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width:16px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-download {
+    background-color:grey;
+}
+
+.share-modal .share-modal-content ul{
+    text-decoration:none;
+    list-style-type:none;
+    margin-top:25px;
+    padding:0px;
+    margin-left:5px;
+}
+
+.share-modal .share-modal-content ul li a{
+    text-decoration:none;
+    color:black;
+    transition:0.5s;
+}
+
+.share-modal .share-modal-content ul li a:hover{
+    color:rgb(49, 49, 49);
+}
+
+.share-modal{
+    display:none;
+    position:fixed;
+    z-index:1;
+    right:80px;
+    top:40px;
+    width:20%;
+    height:120px;
+    overflow:auto;
+    background-color:#fcd200;
+    border-radius:10px;
+    border:2px solid black;
+}
+
+.share-modal-content{
+    margin:auto;
+}
+
+.close{
+    color:black;
+    position:absolute;
+    margin-right:5px;
+    top:0px;
+    right:5px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.close:hover{
+    color:grey;
+    cursor:pointer;
+    text-decoration:none;
+}
 
 /*responsive*/
 @media only screen and (max-width:700px){
@@ -241,6 +395,8 @@ body{
         right:10px;
         margin-right:0px;
     }
+
+
 
 }
 
