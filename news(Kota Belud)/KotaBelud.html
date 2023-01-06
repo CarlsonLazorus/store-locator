@@ -49,7 +49,7 @@
                 y = h / zoom;
             }
 
-            glass.style.left = (x + w) + "px";
+            glass.style.left = (x - w + window.innerWidth / 2 - img.width/1.2) + "px";
             glass.style.top = (y - h) + "px";
             glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
         }
@@ -1062,11 +1062,14 @@
     <div class="modal" id="myModal">
         <div class="modal-header">
             <span class="close-cursor" onclick="closeModal()">&times;</span>
-            <button class="full-screen" id="full-screen" onclick="toggleFullScreen()" >
-                <i class='full fas fa-expand'></i>
-                <i class='shrink fas fa-compress'></i>
+            <button class="full-screen" id="full-screen">
+                <i onclick="toggleFullScreen()" class='full fas fa-expand'></i>
+                <i onclick="toggleNotFullScreen()" class='shrink fas fa-compress'></i>
             </button>
-            <button id="zoom" class="zoom" onclick="magnify('imgMag', 2)"><i class='mag fas fa-search-plus'></i><i class='unMag fas fa-search-minus'></i></button>
+            <button id="zoom" class="zoom">
+                <i onclick="magnify('imgMag', 2)" class='mag fas fa-search-plus'></i>
+                <i onclick="notMagnify()" class='unMag fas fa-search-minus'></i>
+            </button>
             <button class="share-link" id="shareLink" onclick="openLink()"><i class="fas fa-share"></i></button>
         </div>
         <div class="modal-content" id="modal-content">
@@ -1608,7 +1611,22 @@
             card.requestFullscreen();
             document.querySelector(".full").style.display = "none";
             document.querySelector(".shrink").style.display = "inline";
-            this.addEventListener('click', document.exitFullscreen());
+        }
+    }
+
+    function toggleNotFullScreen(){
+        document.querySelector(".full").style.display = "inline";
+        document.querySelector(".shrink").style.display = "none";
+        document.exitFullscreen();
+    }
+
+    function notMagnify(){
+        document.querySelector(".mag").style.display = "inline";
+        document.querySelector(".unMag").style.display = "none";
+        const magnifier = document.querySelectorAll(".img-magnifier-glass");
+
+        for(let i = 0; i < magnifier.length ; i++){
+            magnifier[i].style.display = "none";
         }
     }
 

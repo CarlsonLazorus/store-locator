@@ -106,7 +106,7 @@ body{
 .close-cursor{
     color:white;
     position:fixed;
-    top:10px;
+    top:7px;
     right:25px;
     font-size:35px;
     font-weight:bold;
@@ -209,6 +209,14 @@ body{
     background-color: rgba(0, 0, 0, 0);
     border:0px;
     font-size: 20px;
+}
+
+.modal-header button{
+    padding:0px;
+}
+
+.modal-header button i{
+    width:20px;
 }
 
 .modal-header .share-link{
@@ -387,6 +395,48 @@ body{
         object-position: center;
     }
 
+    #spans{
+        grid-column:span 1;
+        width:280px;
+    }
+    
+    #spans .event-picture img{
+        width:280px;
+    }
+
+    .modal{
+        max-height:700px;
+    }
+
+    .my-slides{
+        max-width:700px;
+        max-height:400px;
+    }
+    
+    .my-slides img{
+        max-width: 350px;
+        max-height: 450px;
+        margin-top: 80px
+    }
+
+    .prev{
+        left:15px;
+    }
+
+    .next{
+        right:15px;
+    }
+
+    .prev, .next{
+        padding: 0px;
+        top: 95%;
+    }
+
+    .prev:hover, .next:hover{
+        color:#fcd200;
+        background-color:rgba(0, 0, 0, 0);
+    }
+
     .modal-content{
         margin-top:50px;
     }
@@ -394,6 +444,10 @@ body{
     .close-cursor{
         right:10px;
         margin-right:0px;
+    }
+
+    .share-modal{
+        width:50%;
     }
 
 
