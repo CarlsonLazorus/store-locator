@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="KotaBelud.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Kota Belud</title>
 </head>
 <script src="https://kit.fontawesome.com/8156a33a91.js" crossorigin="anonymous">
@@ -49,8 +50,17 @@
                 y = h / zoom;
             }
 
+            //pc view
             glass.style.left = (x - w + window.innerWidth / 2 - img.width/1.2) + "px";
             glass.style.top = (y - h) + "px";
+
+            //tablet view
+            // glass.style.left = (x - w + window.innerWidth / 2 - img.width/1.73) + "px"; 
+            // glass.style.top = (y - h + window.innerWidth / 2 - img.width/1.73) + "px";
+
+            //mobile phone view 
+            // glass.style.left = (x - w + window.innerWidth / 2 - img.width/1.8) + "px";
+            // glass.style.top = (y - h + window.innerWidth / 2 - img.width/2.5) + "px";
             glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
         }
         function getCursorPos(e){
@@ -86,973 +96,975 @@
             Peranauan Inn, Kg.Sangkir, Kota Belud, Sabah</p>
     </div>
 
-    <div class="event">
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/1.jpeg" 
-                    onclick="openImage();currentSlide(1)" class="hover-shadow cursor">
+    <div class="whole-event-container">
+        <div class="event">
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/1.jpeg" 
+                        onclick="openImage();currentSlide(1)" class="hover-shadow cursor">
+                            
+                    </div>
+                </div>
+            </div>
+        
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/2.jpeg" 
+                        onclick="openImage();currentSlide(2)" class="hover-shadow cursor">
                         
+                    </div>
                 </div>
             </div>
-        </div>
     
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/2.jpeg" 
-                    onclick="openImage();currentSlide(2)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/3.jpeg" 
-                    onclick="openImage();currentSlide(3)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/4.jpeg" 
-                    onclick="openImage();currentSlide(4)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/5.jpeg" 
-                    onclick="openImage();currentSlide(5)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/6.jpeg" 
-                    onclick="openImage();currentSlide(6)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/7.jpeg" 
-                    onclick="openImage();currentSlide(7)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/8.jpeg" 
-                    onclick="openImage();currentSlide(8)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/9881AFC2-2332-482E-8148-3BE473E309C8.jpeg" 
-                    onclick="openImage();currentSlide(9)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/B32071A8-5C86-4AA2-9470-4708426506B0.jpeg" 
-                    onclick="openImage();currentSlide(10)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/CE92AF56-D7F8-42C9-B1E4-9B32BF9BAD85.jpeg"
-                    onclick="openImage();currentSlide(11)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/D205D40B-CB8B-47EE-A848-B2A2DB0658D0.jpeg" 
-                    onclick="openImage();currentSlide(12)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/E184F1D3-AF86-4787-A2D5-B2111F244F68.jpeg" 
-                    onclick="openImage();currentSlide(13)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/F123D08E-B953-4794-8761-D173AA5AFFCA.jpeg"
-                    onclick="openImage();currentSlide(14)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/FC21633B-C5B8-42F9-909C-FA347FA53039.jpeg" 
-                    onclick="openImage();currentSlide(15)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9327.JPG" 
-                    onclick="openImage();currentSlide(16)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9343.JPG" 
-                    onclick="openImage();currentSlide(17)" class="hover-shadow cursor" />
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9344.JPG" 
-                    onclick="openImage();currentSlide(18)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9345.JPG" 
-                    onclick="openImage();currentSlide(19)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9346.JPG" 
-                    onclick="openImage();currentSlide(20)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9350.JPG" 
-                    onclick="openImage();currentSlide(21)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9351.JPG" 
-                    onclick="openImage();currentSlide(22)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9352.JPG" 
-                    onclick="openImage();currentSlide(23)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9353.JPG" 
-                    onclick="openImage();currentSlide(24)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9354.JPG" 
-                    onclick="openImage();currentSlide(25)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9355.JPG" 
-                    onclick="openImage();currentSlide(26)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9356.JPG" 
-                    onclick="openImage();currentSlide(27)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9357.JPG" 
-                    onclick="openImage();currentSlide(28)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9379.JPG" 
-                    onclick="openImage();currentSlide(29)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9380.JPG" 
-                    onclick="openImage();currentSlide(30)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9381.JPG" 
-                    onclick="openImage();currentSlide(31)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9382.JPG" 
-                    onclick="openImage();currentSlide(32)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9383.JPG" 
-                    onclick="openImage();currentSlide(33)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9386.JPG" 
-                    onclick="openImage();currentSlide(34)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9387.JPG" 
-                    onclick="openImage();currentSlide(35)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9389.JPG" 
-                    onclick="openImage();currentSlide(36)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9390.JPG" 
-                    onclick="openImage();currentSlide(37)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9391.JPG" 
-                    onclick="openImage();currentSlide(38)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9393.JPG" 
-                    onclick="openImage();currentSlide(39)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9394.JPG" 
-                    onclick="openImage();currentSlide(40)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9396.JPG"
-                    onclick="openImage();currentSlide(41)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9397.JPG" 
-                    onclick="openImage();currentSlide(42)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9398.JPG" 
-                    onclick="openImage();currentSlide(43)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9400.JPG" 
-                    onclick="openImage();currentSlide(44)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9405.JPG" 
-                    onclick="openImage();currentSlide(45)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9406.JPG" 
-                    onclick="openImage();currentSlide(46)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9407.JPG"
-                    onclick="openImage();currentSlide(47)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9408.JPG"
-                    onclick="openImage();currentSlide(48)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9409.JPG" 
-                    onclick="openImage();currentSlide(49)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9410.JPG" 
-                    onclick="openImage();currentSlide(50)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9411.JPG" 
-                    onclick="openImage();currentSlide(51)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9412.JPG" 
-                    onclick="openImage();currentSlide(52)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9413.JPG" 
-                    onclick="openImage();currentSlide(53)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9414.JPG" 
-                    onclick="openImage();currentSlide(54)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9415.JPG" 
-                    onclick="openImage();currentSlide(55)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9417.JPG" 
-                    onclick="openImage();currentSlide(56)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9418.JPG" 
-                    onclick="openImage();currentSlide(57)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9420.JPG" 
-                    onclick="openImage();currentSlide(58)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9421.JPG" 
-                    onclick="openImage();currentSlide(59)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9422.JPG" 
-                    onclick="openImage();currentSlide(60)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9426.JPG" 
-                    onclick="openImage();currentSlide(61)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9427.JPG" 
-                    onclick="openImage();currentSlide(62)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9428.JPG" 
-                    onclick="openImage();currentSlide(63)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9434.JPG"
-                    onclick="openImage();currentSlide(64)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9435.JPG" 
-                    onclick="openImage();currentSlide(65)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9436.JPG" 
-                    onclick="openImage();currentSlide(66)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9440.JPG" 
-                    onclick="openImage();currentSlide(67)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9441.JPG" 
-                    onclick="openImage();currentSlide(68)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9443.JPG" 
-                    onclick="openImage();currentSlide(69)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9445(sharp).jpg"
-                    onclick="openImage();currentSlide(70)" class="hover-shadow cursor">  
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9445.JPG" 
-                    onclick="openImage();currentSlide(71)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9449.JPG" 
-                    onclick="openImage();currentSlide(72)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9450 (1).JPG" 
-                    onclick="openImage();currentSlide(73)" class="hover-shadow cursor" /> 
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9450(sharp).jpg" 
-                    onclick="openImage();currentSlide(74)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9450.JPG" 
-                    onclick="openImage();currentSlide(75)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9451 (1).JPG" 
-                    onclick="openImage();currentSlide(76)" class="hover-shadow cursor">  
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9451(sharp).jpg" 
-                    onclick="openImage();currentSlide(77)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9451.JPG" 
-                    onclick="openImage();currentSlide(78)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9457.JPG" 
-                    onclick="openImage();currentSlide(79)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9470.JPG" 
-                    onclick="openImage();currentSlide(80)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9471.JPG" 
-                    onclick="openImage();currentSlide(81)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9473.JPG"
-                    onclick="openImage();currentSlide(82)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9478.JPG" 
-                    onclick="openImage();currentSlide(83)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9479(sharp).jpg" 
-                    onclick="openImage();currentSlide(84)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9479.JPG" 
-                    onclick="openImage();currentSlide(85)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9481.JPG" 
-                    onclick="openImage();currentSlide(86)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9482.JPG" 
-                    onclick="openImage();currentSlide(87)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9483.JPG" 
-                    onclick="openImage();currentSlide(88)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9484.JPG" 
-                    onclick="openImage();currentSlide(89)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9485(sharp).jpg" 
-                    onclick="openImage();currentSlide(90)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9485.JPG" 
-                    onclick="openImage();currentSlide(91)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9486(sharp).jpg" 
-                    onclick="openImage();currentSlide(92)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9486.JPG" 
-                    onclick="openImage();currentSlide(93)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9487(sharp).jpg" 
-                    onclick="openImage();currentSlide(94)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9487.JPG" 
-                    onclick="openImage();currentSlide(95)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>  
-
-        <div class="event-container" id="event-container">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9488.JPG" 
-                    onclick="openImage();currentSlide(96)" class="hover-shadow cursor">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="event-container" id="spans">
-            <div>
-                <div class="event-picture">
-                    <img src="../pictures/Kota Belud MTB/IMG_9489.JPG" 
-                    onclick="openImage();currentSlide(97)" class="hover-shadow cursor">
-                    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/3.jpeg" 
+                        onclick="openImage();currentSlide(3)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/4.jpeg" 
+                        onclick="openImage();currentSlide(4)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/5.jpeg" 
+                        onclick="openImage();currentSlide(5)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/6.jpeg" 
+                        onclick="openImage();currentSlide(6)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/7.jpeg" 
+                        onclick="openImage();currentSlide(7)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/8.jpeg" 
+                        onclick="openImage();currentSlide(8)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/9881AFC2-2332-482E-8148-3BE473E309C8.jpeg" 
+                        onclick="openImage();currentSlide(9)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/B32071A8-5C86-4AA2-9470-4708426506B0.jpeg" 
+                        onclick="openImage();currentSlide(10)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/CE92AF56-D7F8-42C9-B1E4-9B32BF9BAD85.jpeg"
+                        onclick="openImage();currentSlide(11)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/D205D40B-CB8B-47EE-A848-B2A2DB0658D0.jpeg" 
+                        onclick="openImage();currentSlide(12)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/E184F1D3-AF86-4787-A2D5-B2111F244F68.jpeg" 
+                        onclick="openImage();currentSlide(13)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/F123D08E-B953-4794-8761-D173AA5AFFCA.jpeg"
+                        onclick="openImage();currentSlide(14)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/FC21633B-C5B8-42F9-909C-FA347FA53039.jpeg" 
+                        onclick="openImage();currentSlide(15)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9327.JPG" 
+                        onclick="openImage();currentSlide(16)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9343.JPG" 
+                        onclick="openImage();currentSlide(17)" class="hover-shadow cursor" />
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9344.JPG" 
+                        onclick="openImage();currentSlide(18)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9345.JPG" 
+                        onclick="openImage();currentSlide(19)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9346.JPG" 
+                        onclick="openImage();currentSlide(20)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9350.JPG" 
+                        onclick="openImage();currentSlide(21)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9351.JPG" 
+                        onclick="openImage();currentSlide(22)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9352.JPG" 
+                        onclick="openImage();currentSlide(23)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9353.JPG" 
+                        onclick="openImage();currentSlide(24)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9354.JPG" 
+                        onclick="openImage();currentSlide(25)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9355.JPG" 
+                        onclick="openImage();currentSlide(26)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9356.JPG" 
+                        onclick="openImage();currentSlide(27)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9357.JPG" 
+                        onclick="openImage();currentSlide(28)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9379.JPG" 
+                        onclick="openImage();currentSlide(29)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9380.JPG" 
+                        onclick="openImage();currentSlide(30)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9381.JPG" 
+                        onclick="openImage();currentSlide(31)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9382.JPG" 
+                        onclick="openImage();currentSlide(32)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9383.JPG" 
+                        onclick="openImage();currentSlide(33)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9386.JPG" 
+                        onclick="openImage();currentSlide(34)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9387.JPG" 
+                        onclick="openImage();currentSlide(35)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9389.JPG" 
+                        onclick="openImage();currentSlide(36)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9390.JPG" 
+                        onclick="openImage();currentSlide(37)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9391.JPG" 
+                        onclick="openImage();currentSlide(38)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9393.JPG" 
+                        onclick="openImage();currentSlide(39)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9394.JPG" 
+                        onclick="openImage();currentSlide(40)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9396.JPG"
+                        onclick="openImage();currentSlide(41)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9397.JPG" 
+                        onclick="openImage();currentSlide(42)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9398.JPG" 
+                        onclick="openImage();currentSlide(43)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9400.JPG" 
+                        onclick="openImage();currentSlide(44)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9405.JPG" 
+                        onclick="openImage();currentSlide(45)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9406.JPG" 
+                        onclick="openImage();currentSlide(46)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9407.JPG"
+                        onclick="openImage();currentSlide(47)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9408.JPG"
+                        onclick="openImage();currentSlide(48)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9409.JPG" 
+                        onclick="openImage();currentSlide(49)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9410.JPG" 
+                        onclick="openImage();currentSlide(50)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9411.JPG" 
+                        onclick="openImage();currentSlide(51)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9412.JPG" 
+                        onclick="openImage();currentSlide(52)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9413.JPG" 
+                        onclick="openImage();currentSlide(53)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9414.JPG" 
+                        onclick="openImage();currentSlide(54)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9415.JPG" 
+                        onclick="openImage();currentSlide(55)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9417.JPG" 
+                        onclick="openImage();currentSlide(56)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9418.JPG" 
+                        onclick="openImage();currentSlide(57)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9420.JPG" 
+                        onclick="openImage();currentSlide(58)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9421.JPG" 
+                        onclick="openImage();currentSlide(59)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9422.JPG" 
+                        onclick="openImage();currentSlide(60)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9426.JPG" 
+                        onclick="openImage();currentSlide(61)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9427.JPG" 
+                        onclick="openImage();currentSlide(62)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9428.JPG" 
+                        onclick="openImage();currentSlide(63)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9434.JPG"
+                        onclick="openImage();currentSlide(64)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9435.JPG" 
+                        onclick="openImage();currentSlide(65)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9436.JPG" 
+                        onclick="openImage();currentSlide(66)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9440.JPG" 
+                        onclick="openImage();currentSlide(67)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9441.JPG" 
+                        onclick="openImage();currentSlide(68)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9443.JPG" 
+                        onclick="openImage();currentSlide(69)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9445(sharp).jpg"
+                        onclick="openImage();currentSlide(70)" class="hover-shadow cursor">  
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9445.JPG" 
+                        onclick="openImage();currentSlide(71)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9449.JPG" 
+                        onclick="openImage();currentSlide(72)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9450 (1).JPG" 
+                        onclick="openImage();currentSlide(73)" class="hover-shadow cursor" /> 
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9450(sharp).jpg" 
+                        onclick="openImage();currentSlide(74)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9450.JPG" 
+                        onclick="openImage();currentSlide(75)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9451 (1).JPG" 
+                        onclick="openImage();currentSlide(76)" class="hover-shadow cursor">  
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9451(sharp).jpg" 
+                        onclick="openImage();currentSlide(77)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9451.JPG" 
+                        onclick="openImage();currentSlide(78)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9457.JPG" 
+                        onclick="openImage();currentSlide(79)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9470.JPG" 
+                        onclick="openImage();currentSlide(80)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9471.JPG" 
+                        onclick="openImage();currentSlide(81)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9473.JPG"
+                        onclick="openImage();currentSlide(82)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9478.JPG" 
+                        onclick="openImage();currentSlide(83)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9479(sharp).jpg" 
+                        onclick="openImage();currentSlide(84)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9479.JPG" 
+                        onclick="openImage();currentSlide(85)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9481.JPG" 
+                        onclick="openImage();currentSlide(86)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9482.JPG" 
+                        onclick="openImage();currentSlide(87)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9483.JPG" 
+                        onclick="openImage();currentSlide(88)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9484.JPG" 
+                        onclick="openImage();currentSlide(89)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9485(sharp).jpg" 
+                        onclick="openImage();currentSlide(90)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9485.JPG" 
+                        onclick="openImage();currentSlide(91)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9486(sharp).jpg" 
+                        onclick="openImage();currentSlide(92)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9486.JPG" 
+                        onclick="openImage();currentSlide(93)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9487(sharp).jpg" 
+                        onclick="openImage();currentSlide(94)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9487.JPG" 
+                        onclick="openImage();currentSlide(95)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>  
+    
+            <div class="event-container" id="event-container">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9488.JPG" 
+                        onclick="openImage();currentSlide(96)" class="hover-shadow cursor">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="event-container" id="spans">
+                <div>
+                    <div class="event-picture">
+                        <img src="../pictures/Kota Belud MTB/IMG_9489.JPG" 
+                        onclick="openImage();currentSlide(97)" class="hover-shadow cursor">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -1070,7 +1082,9 @@
                 <i onclick="magnify('imgMag', 2)" class='mag fas fa-search-plus'></i>
                 <i onclick="notMagnify()" class='unMag fas fa-search-minus'></i>
             </button>
-            <button class="share-link" id="shareLink" onclick="openLink()"><i class="fas fa-share"></i></button>
+            <span id="share-link" onclick="openLink()" class="share-link material-symbols-outlined">
+                share
+                </span>
         </div>
         <div class="modal-content" id="modal-content">
             <div class="my-slides" id="my-slides">
@@ -1566,9 +1580,9 @@
                 <div class="share-modal-content">
                     <span class="close" onclick="closeLink()">&times;</span>
                     <ul >
-                        <li><a href="#"><i class="fa fa-facebook"></i>  Share on Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i> Share on Twitter</a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i> Pin it</a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i>  Share on Facebook</a></li><br>
+                        <li><a href="#"><i class="fa fa-twitter"></i> Share on Twitter</a></li><br>
+                        <li><a href="#"><i class="fa fa-pinterest"></i> Pin it</a></li><br>
                         <li><a href="#"><i class="fa fa-download"></i> Download image</a></li>
                     </ul>
                 </div>
@@ -1593,10 +1607,15 @@
 
    function openImage(){
     document.getElementById("myModal").style.display = "block";
-    document.querySelector(".full").style.display = "inline";
+    document.querySelector(".full").style.display = "block";
     document.querySelector(".shrink").style.display = "none";
-    document.querySelector(".mag").style.display = "inline";
+    document.querySelector(".mag").style.display = "block";
     document.querySelector(".unMag").style.display = "none";
+    const magnifier = document.querySelectorAll(".img-magnifier-glass");
+
+    for(let i = 0; i < magnifier.length ; i++){
+        magnifier[i].style.display = "none";
+    }
    }
 
    function closeModal(){
@@ -1610,18 +1629,18 @@
         if(card.requestFullscreen) {
             card.requestFullscreen();
             document.querySelector(".full").style.display = "none";
-            document.querySelector(".shrink").style.display = "inline";
+            document.querySelector(".shrink").style.display = "block";
         }
     }
 
     function toggleNotFullScreen(){
-        document.querySelector(".full").style.display = "inline";
+        document.querySelector(".full").style.display = "block";
         document.querySelector(".shrink").style.display = "none";
         document.exitFullscreen();
     }
 
     function notMagnify(){
-        document.querySelector(".mag").style.display = "inline";
+        document.querySelector(".mag").style.display = "block";
         document.querySelector(".unMag").style.display = "none";
         const magnifier = document.querySelectorAll(".img-magnifier-glass");
 
