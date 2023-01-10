@@ -47,25 +47,41 @@ body{
     text-align: left;
 }
 
-
-/*image grid*/
-.image-grid {
-	--gap: 16px;
-	--num-cols: 5;
-	--row-height: 300px;  
-	box-sizing: border-box;
-	padding: var(--gap);  
-	display: grid;
-	grid-template-columns: repeat(var(--num-cols), 1fr);
-	grid-auto-rows: var(--row-height);
-	gap: var(--gap);
+/*image column*/
+.event-image{
+    width:80%;
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top:70px;
 }
-
-.image-grid>img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-    
+.event-image ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vmin;
+    list-style:none;
+    padding-left:0px;
+}
+  
+.event-image li {
+    height: 30vh;
+    flex-grow: 1;
+    margin: 1vmin;
+    overflow:hidden;
+}
+  
+.event-image li:last-child {
+    flex-grow: 10;
+}
+  
+.event-image img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    transition:0.5s ease-in-out;
+}
+.event-image img:hover{
+    transform:scale(1.1);
 }
 
 
@@ -101,12 +117,12 @@ body{
     max-width: 1200px;
 }
 
-/* The Close Button */
+/* Close Button */
 .close {
     color: white;
     position: absolute;
     top: 10px;
-    right: 12px;
+    right: 15px;
     font-size: 35px;
     font-weight: bold;
 }
@@ -116,6 +132,190 @@ body{
     color: #ffc600;
     text-decoration: none;
     cursor: pointer;
+}
+/*Share button
+.share{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 36px;
+    font-weight: bold;
+}*/
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --icon-clr: #aaaaaa;
+    --facebook-clr: #3b5998;
+    --twitter-clr: #55acee;
+    --instagram-clr: #bc2a8d;
+    /*--reddit-clr: #ff4500;*/
+    --tiktok-clr: #010101;
+}
+.wrapper {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+.share-button {
+    font-size: 36px;
+    cursor: pointer;
+    color:white;
+}
+.share-button .icon {
+    display: flex;
+}
+  
+.social-list {
+    position: absolute;
+}
+  
+.social-list ul {
+    display: none;
+    width: auto;
+    background: var(--white);
+    margin: 0 10px;
+    border-radius: 25px;
+    position: relative;
+  }
+  
+.social-list ul li a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--icon-clr);
+}
+  
+.social-list ul:before {
+    content: "";
+    position: absolute;
+    border: 8px solid;
+}
+.share-wrapper .social-list {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.share-wrapper .social-list ul {
+    flex-direction: column;
+    width: 175px;
+    border-radius: 5px;
+    list-style:none;
+}
+  
+.share-wrapper .social-list ul li a {
+    width: 100%;
+    margin: 0;
+    justify-content: unset;
+    /*padding: 0 40px;*/
+    text-decoration: none;
+  }
+  
+.share-wrapper .social-list ul li a span {
+    display: flex;
+  }
+  
+.share-wrapper .social-list ul li a span.icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+.share-wrapper .social-list ul li a span.text {
+    width: 125px;
+  }
+  
+.share-wrapper .social-list ul:before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent var(--white) transparent;
+}
+  
+.share-wrapper .social-list ul li a.facebook span.icon,
+.share-wrapper .social-list ul li a.facebook span.text:hover{
+    color: var(--facebook-clr);
+}
+  
+.share-wrapper .social-list ul li a.instagram span.icon,
+.share-wrapper .social-list ul li a.instagram span.text:hover{
+    color: var(--instagram-clr);
+}
+  
+.share-wrapper .social-list ul li a.tiktok span.icon,
+.share-wrapper .social-list ul li a.tiktok span.text:hover{
+    color: var(--tiktok-clr);
+}
+
+.share-wrapper .social-list ul li a.twitter span.icon,
+.share-wrapper .social-list ul li a.twitter span.text:hover{
+    color: var(--twitter-clr);
+} 
+.share-wrapper .social-list ul li a.download span.icon,
+.share-wrapper .social-list ul li a.download span.text:hover{
+    color: var(--black);
+} 
+
+
+.share-button.active + .social-list ul {
+    display: flex;
+}
+
+/*zoom button*/
+.zoom-in{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.zoom-out{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 85px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.image-container {
+	width: 100%;
+	height: 100%;
+	transition: all 0.1s ease;
+}
+
+.image-container img {
+	width: 100%;
+	transform: scale(1);
+	transition: all 0.3s ease;
+	touch-action: pan-y;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.image-container.zoom-in {
+	cursor: -webkit-grab;
+}
+
+.image-container.zoom-in img {
+	transform: scale(1.5);
+}
+
+
+
+/*fullscreen button*/
+.fullscreen{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 155px;
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .mySlides {
@@ -162,7 +362,7 @@ body{
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 12px;
 }
 
@@ -175,15 +375,6 @@ body{
     opacity: 1;
 }
 
-img.hover-shadow {
-    transition: 0.3s;
-    transition: all .1s ease-out;
-}
-
-.hover-shadow:hover {
-    /*box-shadow: 5px 5px 2px rgba(255, 198, 0, 0.8), 0 6px 20px 0 rgba(255, 207, 0, 0.19);*/
-    transform: scale(1.1);
-}
 
 
 /*responsive design*/
@@ -230,25 +421,53 @@ img.hover-shadow {
         font-size:20px;
         margin:auto;
     }
-    .image-grid{
-        display: block;
-        margin-top:-30px;
-    }
-    .image-grid img{
-        /*height:300px;*/
+    .event-image img{
+        height:300px;
         margin-bottom:16px;
-        /*object-fit:contain;*/
+    }
+    .event image ul{
+        margin-left:50px;
+        margin-right:50px;
     }
     .modal img{
         margin-top:50px;
         margin-bottom:20px;
+        margin-left:auto;
+        margin-right:auto;
         width:360px;
         height:700px;
-
     }
     .close{
         top:40px;
         right: 15px;   
+    }
+    .share-button{
+        margin-top:30px;
+        right: 50px;
+    }
+    .social-list ul {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .share-wrapper .social-list ul {
+        width:100px;
+    }
+    .share-wrapper .social-list {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .zoom-out{
+        margin-top:30px;
+        right: 85px;
+    }
+    .zoom-in{
+        margin-top:30px;
+        right: 120px;
+    }
+    .fullscreen{
+        margin-top:30px;
+        right: 155px;
     }
     .numbertext {
         top:50px;
@@ -299,28 +518,54 @@ img.hover-shadow {
         margin-bottom:0px;
         font-size:20px;
     }
-    .image-grid{
-        display: block;
-        margin-top:-30px;
-    }
-    .image-grid img{
-        margin-bottom:16px;
-    }
     .modal img{
-        margin-top:125px;
+        margin-top:120px;
         margin-bottom:50px;
+        margin-left:auto;
+        margin-right:auto;
         width:360px;
         height:900px;
-
     }
     .close{
-        top: 120px;
-        right: 30px;
+        top: 30px;
+        right: 15px;
+        font-size:50px;
+    }
+    .share-button{
+        margin-top:15px;
+        margin-right:10px;
+        font-size:50px;
+    }
+    .social-list ul {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .share-wrapper .social-list ul {
+        width:110px;
+    }
+    .share-wrapper .social-list {
+        top: 80px;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+    .zoom-out{
+        margin-top:15px;
+        margin-right:15px;
+        font-size:50px;
+    }
+    .zoom-in{
+        margin-top:15px;
+        margin-right:20px;
+        font-size:50px;
+    }
+    .fullscreen{
+        margin-top:15px;
+        margin-right:25px;
         font-size:50px;
     }
     .numbertext {
-        top:128px;
-        left: 4px;
+        top:38px;
+        left: 15px;
         font-size:20px;
     }
 }
